@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GO Shop
 
-## Available Scripts
+# My Shopping List
 
-In the project directory, you can run:
+An App that makes shopping lists easy to create and easy to use.
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is a shopping list app to make shopping lists easy to create and easy to use. The lists that you use should be reusable and easy to share over different technologies. When shopping, items will be easy to find and ticked off as you go.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+When the user has set up their lists, they can quickly get up their &#39;weekly shopping&#39; or &#39;fruit &amp; veg markets&#39; list and tick them off as they go.
 
-### `npm test`
+It allows for users who want either simple lists or more complicated lists.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features &amp; Progress
 
-### `npm run build`
+Boxes are ticked for features completed
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Home Screen
+  - ☐Show Lists
+  - ☐Build New List
+  - ☐Choose from other lists
+  - ☐List History
+  - ☐Instructions button
+  - ☐About button
+  - ☐Favourite List
+- Shopping List
+  - ☐Bought it button
+  - ☐Done button (show all items you&#39;ve got so far)
+  - ☐Categories
+  - ☐Swiping Actions
+- List Builder
+  - ☐Display items with a check box
+  - ☐Select All/ Deselect All button
+  - ☐Create new item option
+  - ☐Show list so far button
+  - ☐Done button
+  - ☐List History
+- Create new item
+  - ☐Fields /name/store/category
+  - ☐Add button
+  - ☐Cancel button
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The App will be a web-based App utilizing Create-React-App.
 
-### `npm run eject`
+- Create-React-App
+- Redux
+- Bootstrap
+- Html
+- Css
+- MongoDB
+- Semantic UI
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## See App Running
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When the app is running instructions on how to use it will be placed here.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
