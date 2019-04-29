@@ -1,9 +1,9 @@
-import items from '../data/items.json'
+import lists from '../data/lists.json'
 import _ from 'lodash'
 
 export default function(state = null, action) {
   if (!state) {
-    state = _.mapKeys(items, 'name')
+    state = _.mapKeys(lists, 'name')
   }
 
   return state

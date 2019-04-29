@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import TheLists from './components/TheLists'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
         </div>
       </div>
+      <TheLists />
     </div>
   )
 }

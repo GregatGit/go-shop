@@ -1,15 +1,79 @@
 [
-    {"name": "cheese", "category": "fresh", "store": "Aldi", "weekly": false },
-    {"name": "apples", "category": "produce", "store": "Fruit_Market", "weekly": false},
-    {"name": "oranges", "category": "produce", "store": "Fruit_Market", "weekly": false},
-    {"name": "tomatoes", "category": "produce", "store": "Fruit_Market", "weekly": true},
-    {"name": "milk", "category": "fresh", "store": "Aldi", "weekly": true},
-    {"name": "chicken_legs", "category": "fresh", "store": "Aldi", "weekly": false},
-    {"name": "rye_bread", "category": "fresh", "store": "Coles", "weekly": false},
-    {"name": "dish_soap", "category": "cleaning", "store": "Aldi", "weekly": false},
-    {"name": "tissues", "category": "health", "store": "Aldi", "weekly": false},
-    {"name": "face_wash", "category": "health", "store": "Aldi", "weekly": false},
-    {"name": "coffee", "category": "beverages", "store": "Coles", "weekly": false},
-    {"name": "tea", "category": "beverages", "store": "Aldi", "weekly": false},
-    {"name": "soft_drink", "category": "beverages", "store": "Aldi", "weekly": false}
+  { "name": "cheese", "category": "fresh", "store": "Aldi", "lists": ["wy1"] },
+  {
+    "name": "apples",
+    "category": "produce",
+    "store": "Fruit_Market",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "oranges",
+    "category": "produce",
+    "store": "Fruit_Market",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "tomatoes",
+    "category": "produce",
+    "store": "Fruit_Market",
+    "lists": ["wy1"]
+  },
+  { "name": "milk", "category": "fresh", "store": "Aldi", "lists": ["wy1"] },
+  {
+    "name": "chicken_legs",
+    "category": "meat",
+    "store": "Aldi",
+    "lists": ["wy1"]
+  },
+  { "name": "rye_bread", "category": "fresh", "store": "Coles", "lists": [] },
+  { "name": "dish_soap", "category": "cleaning", "store": "Aldi", "lists": [] },
+  { "name": "tissues", "category": "health", "store": "Aldi", "lists": [] },
+  { "name": "face_wash", "category": "health", "store": "Aldi", "lists": [] },
+  {
+    "name": "coffee",
+    "category": "beverages",
+    "store": "Coles",
+    "lists": ["wy1"]
+  },
+  { "name": "tea", "category": "beverages", "store": "Aldi", "lists": [] },
+  {
+    "name": "soft_drink",
+    "category": "beverages",
+    "store": "Aldi",
+    "lists": ["ps2"]
+  },
+  {
+    "name": "coke",
+    "category": "beverages",
+    "store": "Coles",
+    "lists": ["ps2"]
+  },
+  {
+    "name": "bread",
+    "category": "backery",
+    "store": "Aldi",
+    "description": "light rye sandwiches",
+    "lists": ["wy1", "qs3"]
+  },
+  {
+      "name": "canned_tomatoes",
+      "category": "canned",
+      "store": "Aldi",
+      "description": "Australian canned tomatoes",
+      "lists":["wy1"]
+  },
+  {
+      "name": "Pasta_Sauce",
+      "category": "canned",
+      "store":"Aldi",
+      "description": "",
+      "lists":["wy1"]
+  },
+  {
+      "name": "beef_mince",
+        "category": "meat",
+        "store":"Aldi",
+        "description": "4 start 500g",
+        "lists":["wy1"]
+  }
 ]
