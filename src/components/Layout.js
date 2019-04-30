@@ -3,18 +3,17 @@ import _ from 'lodash'
 import { displayName } from '../helpers/helpers'
 
 const Layout = props => {
-  console.log(props)
   const listSegments = _.map(props.lists, list => {
     return (
-      <div key={list.code} className="ui segment">{displayName(list.name)}</div>
+      <div key={list.code} className="ui segment">
+        {displayName(list.name)}
+      </div>
     )
   })
   return (
     <div className="ui equal width grid">
       <div className="stretched row">
-        <div className="column">
-          {listSegments}
-        </div>
+        <div className="column">{listSegments}</div>
         <div className="six wide column">
           <div className="ui segment">
             <img
