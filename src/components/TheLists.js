@@ -4,8 +4,9 @@ import Layout from './Layout'
 // import { bindActionCreators } from 'redux';
 
 class TheLists extends React.Component {
-
+  
   render() {
+    console.log(this.props.lists)
     return (
       <div>
         <Layout lists={this.props.lists}/>
