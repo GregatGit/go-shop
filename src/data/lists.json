@@ -1,5 +1,5 @@
 [
-  { "name": "weekly", "code": "wy1" },
-  { "name": "party_shop", "code": "ps2" },
-  { "name": "quick_shop", "code": "qs3" }
+  { "name": "weekly", "code": "wy1", "description": "Your weekly grocery shop" },
+  { "name": "party_shop", "code": "ps2", "description": "Typical pary food" },
+  { "name": "quick_shop", "code": "qs3", "description": "Just a few things for now" }
 ]

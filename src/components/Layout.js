@@ -1,12 +1,19 @@
 import React from 'react'
 import _ from 'lodash'
+import { connect } from 'react-redux'
+import { selectChosen } from '../actions'
 import { displayName } from '../helpers/helpers'
 
 class Layout extends React.Component {
+  state = { message: 'Pick a list'}
 
   listSegments = _.map(this.props.lists, list => {
     return (
-      <div key={list.code} className="ui segment">
+      <div 
+      onClick={() => {
+        this.setState({message: list.description})
+        this.props.selectChosen(list.code)}}
+      key={list.code} className="ui segment">
         {displayName(list.name)}
       </div>
     )
@@ -18,10 +25,7 @@ class Layout extends React.Component {
           <div className="column">{this.listSegments}</div>
           <div className="six wide column">
             <div className="ui segment">
-              <img
-                src="https://react.semantic-ui.com/images/wireframe/paragraph.png"
-                className="ui image"
-              />
+              <div>{this.state.message}</div>
             </div>
           </div>
           <div className="column">
@@ -52,4 +56,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout
+export default connect(null, { selectChosen })(Layout)
