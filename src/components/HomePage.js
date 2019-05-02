@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { selectChosen, filterList } from '../actions'
 import { displayName } from '../helpers/helpers'
 
-class Layout extends React.Component {
+class HomePage extends React.Component {
   state = { message: 'Pick a list', list: 'none', code: '' }
 
   listSegments = _.map(this.props.lists, list => {
@@ -81,4 +81,4 @@ class Layout extends React.Component {
 export default connect(
   null,
   { selectChosen, filterList }
-)(Layout)
+)(HomePage)

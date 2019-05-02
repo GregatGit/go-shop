@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Layout from './Layout'
+import HomePage from './HomePage'
 // import { bindActionCreators } from 'redux';
 
 class TheLists extends React.Component {
@@ -9,7 +9,7 @@ class TheLists extends React.Component {
     console.log(this.props.lists)
     return (
       <div>
-        <Layout lists={this.props.lists}/>
+        <HomePage lists={this.props.lists}/>
       </div>
     )
   }
