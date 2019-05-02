@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import TheLists from './components/TheLists'
+import HomePage from './components/HomePage'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           <div />
         </div>
       </div>
-      <TheLists />
+      <HomePage />
       <i aria-hidden="true" className="home huge icon" />
       <br />
     </div>

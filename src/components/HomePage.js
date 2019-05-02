@@ -78,7 +78,13 @@ class HomePage extends React.Component {
   }
 }
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    lists: state.lists
+  }
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   { selectChosen, filterList }
 )(HomePage)
