@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import HomePage from './components/HomePage'
+import MyList from './components/MyList'
 
 function App() {
   return (
@@ -12,8 +14,14 @@ function App() {
           <div />
         </div>
       </div>
-      <HomePage />
-      <i aria-hidden="true" className="home huge icon" />
+      <div>
+        <BrowserRouter>
+          <div>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/page2" component={MyList} />
+          </div>
+        </BrowserRouter>
+      </div>
       <br />
     </div>
   )

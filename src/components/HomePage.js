@@ -1,6 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { selectChosen, filterList } from '../actions'
 import { displayName } from '../helpers/helpers'
 
@@ -14,7 +15,7 @@ class HomePage extends React.Component {
           this.setState({
             message: list.description,
             list: displayName(list.name),
-            code: list.code
+            code: list.code,
           })
           this.props.selectChosen(list.code)
         }}
@@ -38,11 +39,14 @@ class HomePage extends React.Component {
               {this.state.list === 'none' ? (
                 ''
               ) : (
-                <button 
-                onClick={() => this.props.filterList(this.state.code)}
-                className="ui fluid button">
-                  LOAD <u>{this.state.list}</u> LIST
-                </button>
+                <Link to="/page2">
+                  <button
+                    onClick={() => this.props.filterList(this.state.code)}
+                    className="ui fluid button"
+                  >
+                    LOAD <u>{this.state.list}</u> LIST
+                  </button>
+                </Link>
               )}
             </div>
           </div>
@@ -62,7 +66,7 @@ class HomePage extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    lists: state.lists
+    lists: state.lists,
   }
 }
 
