@@ -41,7 +41,7 @@ class HomePage extends React.Component {
                 <button 
                 onClick={() => this.props.filterList(this.state.code)}
                 className="ui fluid button">
-                  LOAD {this.state.list} LIST
+                  LOAD <u>{this.state.list}</u> LIST
                 </button>
               )}
             </div>
@@ -53,24 +53,6 @@ class HomePage extends React.Component {
               <button className="ui fluid button">NEW LIST</button>
             </div>
             <div className="ui segment">2</div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="column">
-            <div className="ui segment">11</div>
-            <div className="ui segment">21</div>
-          </div>
-          <div className="six wide column">
-            <div className="ui segment">
-              <img
-                src="https://react.semantic-ui.com/images/wireframe/paragraph.png"
-                className="ui image"
-              />
-            </div>
-          </div>
-          <div className="column">
-            <div className="ui segment">4</div>
-            <div className="ui segment">5</div>
           </div>
         </div>
       </div>
