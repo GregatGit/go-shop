@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { statusIsBought } from '../actions'
+import { statusIsBought, statusIsSkip } from '../actions'
 import { displayName } from '../helpers/helpers'
 
 class FinalShop extends Component {
@@ -11,13 +11,17 @@ class FinalShop extends Component {
     this.setState({ items })
   }
 
-  itemBought = (name) => {
+  itemBought = name => {
     this.props.statusIsBought(name)
+  }
+
+  itemSkip = name => {
+    this.props.statusIsSkip(name)
   }
 
   showItems = (names, itemList) => {
     return names.map(name => {
-      if (itemList[name].status !== 'buy'){
+      if (itemList[name].status !== 'buy') {
         return
       }
       return (
@@ -32,7 +36,18 @@ class FinalShop extends Component {
                 <p>{itemList[name].description}</p>
               </div>
               <div className="extra">
-                <button onClick={() => this.itemBought(itemList[name].name)} className="ui right floated button">DONE</button>
+                <button
+                  onClick={() => this.itemBought(itemList[name].name)}
+                  className="ui right green floated button"
+                >
+                  DONE
+                </button>
+                <button
+                  onClick={() => this.itemSkip(itemList[name].name)}
+                  className="ui right floated blue button"
+                >
+                  SKIP
+                </button>
               </div>
             </div>
           </div>
@@ -57,4 +72,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { statusIsBought })(FinalShop)
+export default connect(
+  mapStateToProps,
+  { statusIsBought, statusIsSkip }
+)(FinalShop)

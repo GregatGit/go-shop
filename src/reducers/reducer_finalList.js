@@ -1,5 +1,5 @@
 import items from '../data/testData.json'
-import { STATUS_IS_BOUGHT } from '../actions'
+import { STATUS_IS_BOUGHT, STATUS_IS_SKIP } from '../actions'
 
 export default function(state = null, action) {
   if (!state) {
@@ -7,10 +7,14 @@ export default function(state = null, action) {
   }
   switch (action.type) {
     case STATUS_IS_BOUGHT:
-      const newState = { ...state }
-      newState[action.payload].status = 'bought'
-      return newState
+      const boughtState = { ...state }
+      boughtState[action.payload].status = 'bought'
+      return boughtState
 
+    case STATUS_IS_SKIP:
+      const skipState = { ...state }
+      skipState[action.payload].status = 'skip'
+      return skipState
     default:
       break
   }
