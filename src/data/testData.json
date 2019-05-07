@@ -1,0 +1,34 @@
+{
+  "bread": {
+    "name": "bread",
+    "category": "backery",
+    "shops": ["Aldi"],
+    "description": "Light rye sandwich bread",
+    "status": "buy",
+    "amount": 2
+  },
+  "milk": {
+    "name": "milk",
+    "category": "dairy",
+    "shops": ["Aldi", "Coles"],
+    "description": "2 liters whole milk",
+    "status": "buy",
+    "amount": 1
+  },
+  "coffee_creamer": {
+    "name": "coffee_creamer",
+    "category": "beverages",
+    "shops": ["Coles"],
+    "description": "Nestle coffee creamer",
+    "status": "buy",
+    "amount": 1
+  },
+  "rice": {
+    "name": "rice",
+    "category": "baking&dry",
+    "shops": ["Aldi"],
+    "description": "1kg long grain rice",
+    "status": "buy",
+    "amount": 1
+  }
+}

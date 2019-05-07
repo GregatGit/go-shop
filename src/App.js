@@ -1,8 +1,9 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import MyList from './components/MyList'
+import FinalShop from './components/FinalShop'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <div>
             <Route path="/" exact component={HomePage} />
             <Route path="/page2" component={MyList} />
+            <Route path="/shopping" component={FinalShop} />
           </div>
         </BrowserRouter>
       </div>
