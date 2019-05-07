@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { statusIsBought } from '../actions'
+import { displayName } from '../helpers/helpers'
 
 class FinalShop extends Component {
   state = { items: [] }
@@ -8,24 +10,29 @@ class FinalShop extends Component {
     const items = Object.keys(this.props.items)
     this.setState({ items })
   }
+
+  itemBought = (name) => {
+    this.props.statusIsBought(name)
+  }
+
   showItems = (names, itemList) => {
     return names.map(name => {
+      if (itemList[name].status !== 'buy'){
+        return
+      }
       return (
-        <div class="ui relaxed items">
-          <div class="item">
-            <div class="ui small image">
+        <div key={name} className="ui relaxed items">
+          <div className="item">
+            <div className="ui small image">
               <img src="https://react.semantic-ui.com/images/wireframe/image.png" />
             </div>
-            <div class="middle aligned content">
-              <div class="header">{itemList[name].name}</div>
-              <div class="description">
-                <img
-                  src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png"
-                  class="ui image"
-                />
+            <div className="middle aligned content">
+              <div className="header">{displayName(itemList[name].name)}</div>
+              <div className="description">
+                <p>{itemList[name].description}</p>
               </div>
-              <div class="extra">
-                <button class="ui right floated button">Action</button>
+              <div className="extra">
+                <button onClick={() => this.itemBought(itemList[name].name)} className="ui right floated button">DONE</button>
               </div>
             </div>
           </div>
@@ -50,4 +57,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(FinalShop)
+export default connect(mapStateToProps, { statusIsBought })(FinalShop)
