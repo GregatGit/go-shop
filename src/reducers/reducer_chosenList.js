@@ -5,6 +5,8 @@ export default function(state = message, action) {
   switch (action.type) {
     case LIST_CHOSEN:
       return action.payload
+    default:
+      break
   }
 
   return state
