@@ -4,6 +4,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import MyList from './components/MyList'
 import FinalShop from './components/FinalShop'
+import NewItem from './components/NewItem'
+import NewItemForm from './components/NewItemForm'
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/" exact component={HomePage} />
             <Route path="/page2" component={MyList} />
             <Route path="/shopping" component={FinalShop} />
+            <Route path="/newItem" component={NewItem} />
+            <Route path="/new" component={NewItemForm} />
           </div>
         </BrowserRouter>
       </div>
