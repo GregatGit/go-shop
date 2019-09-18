@@ -5,7 +5,15 @@ import { displayName } from '../helpers/helpers'
 
 class MyList extends Component {
   displayItems = this.props.items.map(item => {
-    return <li key={item.name}>{displayName(item.name)}</li>
+    return (
+      <div>
+        <div className="ui checkbox">
+          <input type="checkbox" name="example" />
+          <label><li key={item.name}>{displayName(item.name)}</li></label>
+        </div>
+        
+      </div>
+    )
   })
 
   render() {
