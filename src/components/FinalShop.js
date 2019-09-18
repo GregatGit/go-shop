@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { statusIsBought, statusIsSkip } from '../actions'
-import { displayName } from '../helpers/helpers'
+import { displayName } from '../helpers'
 
 class FinalShop extends Component {
   state = { items: [] }

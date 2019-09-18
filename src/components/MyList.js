@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { displayName } from '../helpers/helpers'
+import { displayName } from '../helpers'
 
 class MyList extends Component {
   displayItems = this.props.items.map(item => {

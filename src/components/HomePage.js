@@ -3,7 +3,7 @@ import _ from 'lodash'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { selectChosen, filterList } from '../actions'
-import { displayName } from '../helpers/helpers'
+import { displayName } from '../helpers'
 
 class HomePage extends React.Component {
   state = { message: 'Pick a list', list: 'none', code: '' }
