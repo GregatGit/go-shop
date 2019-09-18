@@ -18,7 +18,7 @@
     "store": "Fruit_Market",
     "lists": ["wy1"]
   },
-  { "name": "milk", "category": "fresh", "store": "Aldi", "lists": ["wy1"] },
+  { "name": "milk", "category": "fresh", "store": "Aldi", "lists": ["wy1", "qs3"] },
   {
     "name": "chicken_legs",
     "category": "meat",
