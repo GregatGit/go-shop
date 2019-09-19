@@ -4,9 +4,11 @@ export default function (state = [], action) {
   
   switch (action.type) {
     case ADD_LIST:
-      return [...action.payload]
+      const newList = action.payload.map(item => {
+        return {...item, done: false, skip: false}
+      })
+      return newList
       
-      break;
   
     default:
       return state
