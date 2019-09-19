@@ -27,7 +27,7 @@ const ListToSort = ({ chosen, items, lists }) => {
   const buttonTitle = checked ? 'Add' : 'Remove'
   return (
     <Fragment>
-      <h2>{title} List!</h2>
+      <h2>{title} List</h2>
       <h3>Select items for your shop</h3>
       <p>you can select all if needed</p>
       {showItems(items, chosen)}
