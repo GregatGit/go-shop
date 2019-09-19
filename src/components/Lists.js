@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Lists = ({ name }) => {
+const Lists = ({ name, func }) => {
   return (
     <div>
       <h2>Hi {name}</h2>
       <ul className="myList">
       <li>
-          <button className="myButton">YOUR LISTS</button>
+          <button className="myButton" onClick={() => func('YourLists')}>YOUR LISTS</button>
         </li>
         <li>
           <button className="myButtonOff">QUICK LISTS</button>

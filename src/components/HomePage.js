@@ -8,11 +8,14 @@ import './styles.scss'
 class HomePage extends React.Component {
   state = { user: 'Greg', show: 'Lists' }
 
+  changeShow = (name) => {
+    this.setState({show: name})
+  }
   render() {
     return (
       <div>
-        <Lists name={this.state.user} />
-        <YourLists />
+        {this.state.show === 'Lists' && <Lists func={this.changeShow} name={this.state.user} />}
+        {this.state.show === 'YourLists' && <YourLists />}
       </div>
     )
   }
