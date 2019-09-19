@@ -2,13 +2,14 @@ import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 
 const ListToSort = ({ chosen, items, lists }) => {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(true)
 
   const title = lists[chosen].name
 
   function handleAddRemoveAll() {
     const inputs = document.querySelectorAll('input')
-    inputs.forEach(input => input.checked = true)
+    inputs.forEach(input => input.checked = checked)
+    setChecked(!checked)
   }
 
   function showItems(list, key) {
@@ -23,6 +24,7 @@ const ListToSort = ({ chosen, items, lists }) => {
         )
       })
   }
+  const buttonTitle = checked ? 'Add' : 'Remove'
   return (
     <Fragment>
       <h2>{title} List!</h2>
@@ -30,7 +32,7 @@ const ListToSort = ({ chosen, items, lists }) => {
       <p>you can select all if needed</p>
       {showItems(items, chosen)}
       <div>
-        <button onClick={handleAddRemoveAll}>Add/Remove All</button>
+        <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button>Let's Shop</button>
       </div>
     </Fragment>
