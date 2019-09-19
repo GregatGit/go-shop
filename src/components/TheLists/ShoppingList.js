@@ -1,15 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { itemBought } from '../../actions'
 
-const ShoppingList = ({ list }) => {
+const ShoppingList = ({ list, itemBought }) => {
   const displayList = sList => {
-    return sList.map(item => {
-      return (
-        <li className="sList" key={item.name}>
-          {item.name}
-        </li>
-      )
-    })
+    return sList
+      .filter(item => !item.done)
+      .map(({ name }) => {
+        return (
+          <li className="sList" key={name}>
+            <button onClick={() => itemBought(name)}>{name}</button>
+          </li>
+        )
+      })
   }
   return (
     <div>
@@ -21,8 +24,11 @@ const ShoppingList = ({ list }) => {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    list: state.shoppingList
+    list: state.shoppingList,
   }
 }
 
-export default connect(mapStateToProps)(ShoppingList)
+export default connect(
+  mapStateToProps,
+  { itemBought }
+)(ShoppingList)
