@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
+import { selectChosen } from '../actions'
 import { displayName } from '../helpers'
 
-const YourLists = ({ lists }) => {
+const YourLists = ({ lists, selectChosen }) => {
   const [choosen, setChoosen] = useState(null)
 
   function handleListClick(name){
@@ -10,7 +11,7 @@ const YourLists = ({ lists }) => {
   }
 
   function loadList(list){
-    console.log(list)
+    selectChosen(list)
   }
 
   const createListButton = list => {
@@ -28,7 +29,11 @@ const YourLists = ({ lists }) => {
     <Fragment>
       <h2>Choose A List</h2>
       <ul>{lists && createListButton(lists)}</ul>
-      {choosen && <button onClick={() => loadList(choosen)}>LOAD {displayName(lists[choosen].name)}</button>}
+      {choosen && 
+        <div>
+          <h3>Hit the button below see the list items</h3>
+          <button onClick={() => loadList(choosen)}>LOAD {displayName(lists[choosen].name)}</button>
+        </div>}
     </Fragment>
   )
 }
@@ -39,4 +44,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(YourLists)
+export default connect(mapStateToProps, { selectChosen })(YourLists)

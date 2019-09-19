@@ -1,7 +1,7 @@
 import { LIST_CHOSEN } from '../actions/index.js'
-let message = 'no list selected'
 
-export default function(state = message, action) {
+
+export default function(state = null, action) {
   switch (action.type) {
     case LIST_CHOSEN:
       return action.payload
