@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
+import { addList } from '../../actions'
 
-const ListToSort = ({ chosen, items, lists }) => {
+const ListToSort = ({ chosen, items, lists, addList }) => {
   const [checked, setChecked] = useState(true)
   const title = lists[chosen].name
 
@@ -10,9 +11,8 @@ const ListToSort = ({ chosen, items, lists }) => {
     const arrInputs = Array.from(inputs)
       .filter(item => item.checked)
       .map(a => a.name)
-    const finalList = items.filter(item => arrInputs.indexOf(item.name) !== -1)
-    console.log(finalList)
-
+    const shoppingList = items.filter(item => arrInputs.indexOf(item.name) !== -1)
+    addList(shoppingList)
   }
 
   function handleAddRemoveAll() {
@@ -56,4 +56,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(ListToSort)
+export default connect(mapStateToProps, { addList })(ListToSort)
