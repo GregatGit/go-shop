@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { selectChosen, filterList } from '../actions'
+import './styles.scss'
 
 class HomePage extends React.Component {
   state = { user: 'Greg' }
@@ -9,20 +10,22 @@ class HomePage extends React.Component {
     return (
       <div>
         <h2>Hi {this.state.user}</h2>
-        <ul>
+        <ul className="myList">
           <li>
-            <button>QUICK LISTS</button>
+            <button className="myButton">QUICK LISTS</button>
           </li>
           <li>
-            <button>YOUR LISTS</button>
+            <button className="myButtonOff">YOUR LISTS</button>
           </li>
           <li>
-            <button>MAKE A LIST</button>
+            <button className="myButtonOff">MAKE A LIST</button>
           </li>
           <li>
-            <button>IMPORT A LIST</button>
+            <button className="myButtonOff">IMPORT A LIST</button>
           </li>
-          <li><button>SEND A LIST</button></li>
+          <li>
+            <button className="myButtonOff">SEND A LIST</button>
+          </li>
         </ul>
       </div>
     )
