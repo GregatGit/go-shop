@@ -5,11 +5,11 @@ const Lists = ({ name }) => {
     <div>
       <h2>Hi {name}</h2>
       <ul className="myList">
-        <li>
-          <button className="myButton">QUICK LISTS</button>
+      <li>
+          <button className="myButton">YOUR LISTS</button>
         </li>
         <li>
-          <button className="myButtonOff">YOUR LISTS</button>
+          <button className="myButtonOff">QUICK LISTS</button>
         </li>
         <li>
           <button className="myButtonOff">MAKE A LIST</button>
