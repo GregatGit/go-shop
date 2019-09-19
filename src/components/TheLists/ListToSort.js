@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 import { addList } from '../../actions'
 
-const ListToSort = ({ chosen, items, lists, addList }) => {
+const ListToSort = ({ chosen, items, lists, addList, func }) => {
   const [checked, setChecked] = useState(true)
   const title = lists[chosen].name
 
@@ -13,6 +13,7 @@ const ListToSort = ({ chosen, items, lists, addList }) => {
       .map(a => a.name)
     const shoppingList = items.filter(item => arrInputs.indexOf(item.name) !== -1)
     addList(shoppingList)
+    func()
   }
 
   function handleAddRemoveAll() {
