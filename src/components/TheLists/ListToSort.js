@@ -3,8 +3,17 @@ import { connect } from 'react-redux'
 
 const ListToSort = ({ chosen, items, lists }) => {
   const [checked, setChecked] = useState(true)
-
   const title = lists[chosen].name
+
+  function goShopping() {
+    const inputs = document.querySelectorAll('input')
+    const arrInputs = Array.from(inputs)
+      .filter(item => item.checked)
+      .map(a => a.name)
+    const finalList = items.filter(item => arrInputs.indexOf(item.name) !== -1)
+    console.log(finalList)
+
+  }
 
   function handleAddRemoveAll() {
     const inputs = document.querySelectorAll('input')
@@ -33,7 +42,7 @@ const ListToSort = ({ chosen, items, lists }) => {
       {showItems(items, chosen)}
       <div>
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
-        <button>Let's Shop</button>
+        <button onClick={goShopping}>Let's Shop</button>
       </div>
     </Fragment>
   )
