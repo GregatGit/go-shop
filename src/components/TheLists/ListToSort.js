@@ -1,15 +1,27 @@
-import React, { Fragment} from 'react'
+import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 
-const ListToSort = ({ chosen, items, lists}) => {
+const ListToSort = ({ chosen, items, lists }) => {
+  const [checked, setChecked] = useState(false)
+
   const title = lists[chosen].name
 
+  function handleAddRemoveAll() {
+    const inputs = document.querySelectorAll('input')
+    inputs.forEach(input => input.checked = true)
+  }
+
   function showItems(list, key) {
-    return list.filter(item => item.lists.indexOf(key) !== -1).map(a => {
-      return (
-        <li key={a.name}>{a.name}</li>
-      )
-    })
+    return list
+      .filter(item => item.lists.indexOf(key) !== -1)
+      .map(a => {
+        return (
+          <li key={a.name}>
+            <input type="checkbox" id={a.name} name={a.name} />
+            <label for={a.name}> {a.name}</label>
+          </li>
+        )
+      })
   }
   return (
     <Fragment>
@@ -17,6 +29,10 @@ const ListToSort = ({ chosen, items, lists}) => {
       <h3>Select items for your shop</h3>
       <p>you can select all if needed</p>
       {showItems(items, chosen)}
+      <div>
+        <button onClick={handleAddRemoveAll}>Add/Remove All</button>
+        <button>Let's Shop</button>
+      </div>
     </Fragment>
   )
 }
@@ -25,8 +41,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     chosen: state.chosen,
     items: state.items,
-    lists: state.lists
+    lists: state.lists,
   }
 }
 
-export default connect(mapStateToProps,)(ListToSort)
+export default connect(mapStateToProps)(ListToSort)
