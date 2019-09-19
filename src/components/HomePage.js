@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { selectChosen, filterList } from '../actions'
 import Lists from './Lists'
 import YourLists from './YourLists'
-import TheList from './TheList'
+import TheList from './TheLists/Index'
 import './styles.scss'
 
 class HomePage extends React.Component {
@@ -21,7 +21,7 @@ class HomePage extends React.Component {
         {this.state.show === 'YourLists' && <YourLists />}
       </div>
     )} else {
-      return <TheList selected={chosen} />
+      return <TheList />
     }
   }
 }
