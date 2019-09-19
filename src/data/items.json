@@ -18,7 +18,12 @@
     "store": "Fruit_Market",
     "lists": ["wy1"]
   },
-  { "name": "milk", "category": "fresh", "store": "Aldi", "lists": ["wy1", "qs3"] },
+  {
+    "name": "milk",
+    "category": "fresh",
+    "store": "Aldi",
+    "lists": ["wy1", "qs3"]
+  },
   {
     "name": "chicken_legs",
     "category": "meat",
@@ -56,24 +61,24 @@
     "lists": ["wy1", "qs3"]
   },
   {
-      "name": "canned_tomatoes",
-      "category": "canned",
-      "store": "Aldi",
-      "description": "Australian canned tomatoes",
-      "lists":["wy1"]
+    "name": "canned_tomatoes",
+    "category": "canned",
+    "store": "Aldi",
+    "description": "Australian canned tomatoes",
+    "lists": ["wy1"]
   },
   {
-      "name": "Pasta_Sauce",
-      "category": "canned",
-      "store":"Aldi",
-      "description": "",
-      "lists":["wy1"]
+    "name": "Pasta_Sauce",
+    "category": "canned",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
   },
   {
-      "name": "beef_mince",
-        "category": "meat",
-        "store":"Aldi",
-        "description": "4 start 500g",
-        "lists":["wy1"]
+    "name": "beef_mince",
+    "category": "meat",
+    "store": "Aldi",
+    "description": "4 start 500g",
+    "lists": ["wy1"]
   }
 ]
