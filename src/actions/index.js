@@ -7,6 +7,13 @@ export const ADD_LIST = 'ADD_LIST'
 export const ITEM_BOUGHT = 'ITEM_BOUGHT'
 export const HOME_PAGE = 'HOME_PAGE'
 export const COMPLETED_LIST = 'COMPLETED_LIST'
+export const EMPTY_SHOPPINGLIST = 'EMPTY_SHOPPINGLIST'
+
+export function emptyShoppingList() {
+  return {
+    type: EMPTY_SHOPPINGLIST
+  }
+}
 
 export function completedList(list) {
   return { 

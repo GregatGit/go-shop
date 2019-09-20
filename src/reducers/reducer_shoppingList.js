@@ -1,4 +1,4 @@
-import { ADD_LIST, ITEM_BOUGHT } from '../actions'
+import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST } from '../actions'
 
 export default function (state = [], action) {
   
@@ -14,6 +14,10 @@ export default function (state = [], action) {
       const altered = [...state]
       altered[index].done = true
       return altered
+
+    case EMPTY_SHOPPINGLIST:
+      return []
+      
     default:
       return state
   }
