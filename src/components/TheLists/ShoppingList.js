@@ -1,8 +1,8 @@
 import React, { useState} from 'react'
 import { connect } from 'react-redux'
-import { itemBought, homePage, completedList } from '../../actions'
+import { itemBought, homePage, completedList, emptyShoppingList } from '../../actions'
 
-const ShoppingList = ({ list, itemBought, homePage, completedList }) => {
+const ShoppingList = ({ list, itemBought, homePage, completedList, emptyShoppingList }) => {
   const [count, setCount] = useState(list.length)
 
   const itemClick = (name) => {
@@ -12,6 +12,7 @@ const ShoppingList = ({ list, itemBought, homePage, completedList }) => {
 
   const done = () => {
     completedList(list)
+    emptyShoppingList()
     homePage()
   }
   const displayList = sList => {
@@ -45,5 +46,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
   mapStateToProps,
-  { itemBought, homePage, completedList }
+  { itemBought, homePage, completedList, emptyShoppingList }
 )(ShoppingList)
