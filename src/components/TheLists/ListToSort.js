@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
-import { addList } from '../../actions'
+import { addList, homePage } from '../../actions'
 
-const ListToSort = ({ chosen, items, lists, addList, func }) => {
+const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
   const [checked, setChecked] = useState(true)
   const title = lists[chosen].name
 
@@ -45,6 +45,7 @@ const ListToSort = ({ chosen, items, lists, addList, func }) => {
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={goShopping}>Let's Shop</button>
       </div>
+      <button onClick={homePage}>HOME!</button>
     </Fragment>
   )
 }
@@ -57,4 +58,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { addList })(ListToSort)
+export default connect(mapStateToProps, { addList, homePage })(ListToSort)
