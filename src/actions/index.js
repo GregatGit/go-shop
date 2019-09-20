@@ -6,6 +6,14 @@ export const STATUS_IS_SKIP = 'STATUS_IS_SKIP'
 export const ADD_LIST = 'ADD_LIST'
 export const ITEM_BOUGHT = 'ITEM_BOUGHT'
 export const HOME_PAGE = 'HOME_PAGE'
+export const COMPLETED_LIST = 'COMPLETED_LIST'
+
+export function completedList(list) {
+  return { 
+    type: COMPLETED_LIST,
+    payload: list
+  }
+}
 
 export function homePage() {
   return {
