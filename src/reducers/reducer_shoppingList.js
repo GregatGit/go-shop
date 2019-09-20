@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import { ADD_LIST, ITEM_BOUGHT } from '../actions'
 
 export default function (state = [], action) {
