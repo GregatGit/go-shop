@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { connect } from 'react-redux'
 import { addList, homePage } from '../../actions'
+import { displayName } from '../../helpers'
 
 const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
   const [checked, setChecked] = useState(true)
@@ -29,7 +30,7 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
         return (
           <li key={a.name}>
             <input type="checkbox" id={a.name} name={a.name} />
-            <label for={a.name}> {a.name}</label>
+            <label for={a.name}> {displayName(a.name)}</label>
           </li>
         )
       })

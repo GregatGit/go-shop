@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import { connect } from 'react-redux'
 import { itemBought, homePage, completedList, emptyShoppingList } from '../../actions'
+import { displayName } from '../../helpers'
 
 const ShoppingList = ({ list, itemBought, homePage, completedList, emptyShoppingList }) => {
   const [count, setCount] = useState(list.length)
@@ -21,7 +22,7 @@ const ShoppingList = ({ list, itemBought, homePage, completedList, emptyShopping
       .map(({ name }) => {
         return (
           <li className="sList" key={name}>
-            <button onClick={() => itemClick(name)}>{name}</button>
+            <button onClick={() => itemClick(name)}>{displayName(name)}</button>
           </li>
         )
       })
