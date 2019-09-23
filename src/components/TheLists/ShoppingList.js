@@ -45,7 +45,7 @@ const ShoppingList = ({
     return list
       .filter(item => item.done)
       .map(item => {
-        return <li key={item.name}>{item.name}</li>
+        return <li key={item.name}>{displayName(item.name)}</li>
       })
   }
   function handleBought() { 
