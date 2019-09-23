@@ -6,11 +6,11 @@ import { displayName } from '../helpers'
 const YourLists = ({ lists, selectChosen, home }) => {
   const [choosen, setChoosen] = useState(null)
 
-  function handleListClick(name){
+  function handleListClick(name) {
     setChoosen(name)
   }
 
-  function loadList(list){
+  function loadList(list) {
     selectChosen(list)
   }
 
@@ -20,7 +20,9 @@ const YourLists = ({ lists, selectChosen, home }) => {
       const display = displayName(lists[name].name)
       return (
         <li key={name}>
-          <button onClick={() => handleListClick(name)} className="myButton">{display}</button>
+          <button onClick={() => handleListClick(name)} className="myButton">
+            {display}
+          </button>
         </li>
       )
     })
@@ -29,12 +31,15 @@ const YourLists = ({ lists, selectChosen, home }) => {
     <Fragment>
       <h2>Choose a List</h2>
       <ul>{lists && createListButton(lists)}</ul>
-      {choosen && 
+      {choosen && (
         <div>
           <h3>Hit the button below see the list items</h3>
-          <button onClick={() => loadList(choosen)}>LOAD {displayName(lists[choosen].name)}</button>
-        </div>}
-        <button onClick={home}>HOME</button>
+          <button onClick={() => loadList(choosen)}>
+            LOAD {displayName(lists[choosen].name)}
+          </button>
+        </div>
+      )}
+      <button onClick={home}>HOME</button>
     </Fragment>
   )
 }
@@ -45,4 +50,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { selectChosen })(YourLists)
+export default connect(
+  mapStateToProps,
+  { selectChosen }
+)(YourLists)
