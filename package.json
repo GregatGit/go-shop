@@ -2,6 +2,7 @@
   "name": "go-shop",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gregatgit.github.io/go-shop",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "lodash": "^4.17.15",
