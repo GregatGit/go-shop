@@ -44,7 +44,7 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
       <h3>Select items for your shop</h3>
       <p>you can select all if needed</p>
       <ul className="toSort">{showItems(items, chosen)}</ul>
-      <div>
+      <div className="shopAndAdd">
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={goShopping}>Let's Shop</button>
       </div>
