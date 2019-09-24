@@ -12,7 +12,7 @@ export default function(state = null, action) {
      return state.filter(item => {
        return item.lists.indexOf(action.payload) > -1
      })
+     default:
+       return state
   }
-
-  return state
 }
