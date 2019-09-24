@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import ListToSort from './ListToSort'
 import ShoppingList from './ShoppingList'
+import './styles.scss'
 
 const TheList = () => {
   const [shopping, setShopping] = useState(false)
