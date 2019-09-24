@@ -39,7 +39,7 @@ const YourLists = ({ lists, selectChosen, home }) => {
           </button>
         </div>
       )}
-      <button onClick={home}>HOME</button>
+      <button className="homeButton" onClick={home}>HOME</button>
     </Fragment>
   )
 }
