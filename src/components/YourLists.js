@@ -29,8 +29,8 @@ const YourLists = ({ lists, selectChosen, home }) => {
   }
   return (
     <Fragment>
-      <h2>Choose a List</h2>
-      <ul>{lists && createListButton(lists)}</ul>
+      <h2>CHOOSE A LIST</h2>
+      <ul id="yourList">{lists && createListButton(lists)}</ul>
       {choosen && (
         <div>
           <h3>Hit the button below see the list items</h3>
