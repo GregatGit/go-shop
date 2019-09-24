@@ -52,7 +52,7 @@ const ShoppingList = ({
     setShowBought(!showBought)
   }
   return (
-    <div>
+    <div id="shoppingList">
       <h2>SHOPPING LIST</h2>
       <ul>{list && displayList(list)}</ul>
       {count > 0 ? (
