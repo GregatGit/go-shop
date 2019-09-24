@@ -30,10 +30,30 @@
     "store": "Aldi",
     "lists": ["wy1"]
   },
-  { "name": "rye_bread", "category": "fresh", "store": "Coles", "lists": [] },
-  { "name": "dish_soap", "category": "cleaning", "store": "Aldi", "lists": [] },
-  { "name": "tissues", "category": "health", "store": "Aldi", "lists": [] },
-  { "name": "face_wash", "category": "health", "store": "Aldi", "lists": [] },
+  {
+    "name": "rye_bread",
+    "category": "fresh",
+    "store": "Coles",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "dish_soap",
+    "category": "cleaning",
+    "store": "Aldi",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "tissues",
+    "category": "health",
+    "store": "Aldi",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "face_wash",
+    "category": "health",
+    "store": "Aldi",
+    "lists": ["wy1"]
+  },
   {
     "name": "coffee",
     "category": "beverages",
@@ -54,7 +74,7 @@
     "lists": ["ps2"]
   },
   {
-    "name": "bread",
+    "name": "ligth_rye_bread",
     "category": "backery",
     "store": "Aldi",
     "description": "light rye sandwiches",
@@ -79,6 +99,118 @@
     "category": "meat",
     "store": "Aldi",
     "description": "4 start 500g",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "spaghetti",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "spiral_pasta",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "olive_oil",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "cooking_oil",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "toilet_paper",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "butter",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "mince",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "buns",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "lettuce",
+    "category": "",
+    "store": "Aldi",
+    "description": "onions",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "potatoes",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "diswashing_tablets",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "sliced_ham",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "ham",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "instant_noodles",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "quick_oats",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "musli",
+    "category": "",
+    "store": "Aldi",
+    "description": "",
     "lists": ["wy1"]
   }
 ]

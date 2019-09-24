@@ -1,6 +1,6 @@
 {
   "bread": {
-    "name": "bread",
+    "name": "rye_bread",
     "category": "backery",
     "shops": ["Aldi"],
     "description": "Light rye sandwich bread",
@@ -32,3 +32,13 @@
     "amount": 1
   }
 }
+
+[,
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]}]
