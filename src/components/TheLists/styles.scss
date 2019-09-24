@@ -82,22 +82,17 @@
 #shoppingList {
   li {
     list-style: none;
+    padding: 5px;
 
     button {
-      background: #F6911E;
-      background-image: -webkit-linear-gradient(top, #F6911E, #CAD02A);
-      background-image: -moz-linear-gradient(top, #F6911E, #CAD02A);
-      background-image: -ms-linear-gradient(top, #F6911E, #CAD02A);
-      background-image: -o-linear-gradient(top, #F6911E, #CAD02A);
-      background-image: linear-gradient(to bottom, #F6911E, #CAD02A);
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       border-radius: 20px;
-      color: #000000;
+      color: #FFFFFF;
       font-family: Open Sans;
       font-size: 21px;
-      font-weight: 100;
       padding: 18px;
+      background-color: #2A59F6;
       box-shadow: -3px -2px 5px 0px #000000;
       -webkit-box-shadow: -3px -2px 5px 0px #000000;
       -moz-box-shadow: -3px -2px 5px 0px #000000;
