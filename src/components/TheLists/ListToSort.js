@@ -12,25 +12,27 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
     const arrInputs = Array.from(inputs)
       .filter(item => item.checked)
       .map(a => a.name)
-    const shoppingList = items.filter(item => arrInputs.indexOf(item.name) !== -1)
+    const shoppingList = items.filter(
+      item => arrInputs.indexOf(item.name) !== -1
+    )
     addList(shoppingList)
     func()
   }
 
   function handleAddRemoveAll() {
     const inputs = document.querySelectorAll('input')
-    inputs.forEach(input => input.checked = checked)
+    inputs.forEach(input => (input.checked = checked))
     setChecked(!checked)
   }
 
   function showItems(list, key) {
     return list
       .filter(item => item.lists.indexOf(key) !== -1)
-      .map(a => {
+      .map(({ name }) => {
         return (
-          <li key={a.name}>
-            <input type="checkbox" id={a.name} name={a.name} />
-            <label for={a.name}> {displayName(a.name)}</label>
+          <li className="checkboxFive" key={name}>
+            <input type="checkbox" id={name} name={name} />
+            <label for={name}> {displayName(name)}</label>
           </li>
         )
       })
@@ -41,12 +43,12 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
       <h2>{title} List</h2>
       <h3>Select items for your shop</h3>
       <p>you can select all if needed</p>
-      {showItems(items, chosen)}
+      <ul className="toSort">{showItems(items, chosen)}</ul>
       <div>
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={goShopping}>Let's Shop</button>
       </div>
-      <button onClick={homePage}>HOME!</button>
+      <button className="homeButton" onClick={homePage}>HOME!</button>
     </Fragment>
   )
 }
@@ -59,4 +61,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { addList, homePage })(ListToSort)
+export default connect(
+  mapStateToProps,
+  { addList, homePage }
+)(ListToSort)
