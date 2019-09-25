@@ -12,7 +12,7 @@ const TheList = () => {
 
   return (
     <div>
-      {!shopping && <ListToSort func={goShop} />}
+      {!shopping && <ListToSort goShop={goShop} />}
       {shopping && <ShoppingList />}
     </div>
   )
