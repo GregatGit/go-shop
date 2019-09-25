@@ -37,7 +37,10 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
         )
       })
   }
-  const buttonTitle = checked ? 'Add' : 'Remove'
+  function addMoreItems() {
+    
+  }
+  const buttonTitle = checked ? 'Select' : 'Unselect'
   return (
     <Fragment>
       <h2>{title} List</h2>
@@ -47,6 +50,7 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
       <div className="shopAndAdd">
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={goShopping}>Let's Shop</button>
+        <button onClick={addMoreItems}>Add more items</button>
       </div>
       <button className="homeButton" onClick={homePage}>BACK</button>
     </Fragment>
