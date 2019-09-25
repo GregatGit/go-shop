@@ -1,24 +1,6 @@
 [
   { "name": "cheese", "category": "fresh", "store": "Aldi", "lists": ["wy1"] },
   {
-    "name": "apples",
-    "category": "produce",
-    "store": "Fruit_Market",
-    "lists": ["wy1"]
-  },
-  {
-    "name": "oranges",
-    "category": "produce",
-    "store": "Fruit_Market",
-    "lists": ["wy1"]
-  },
-  {
-    "name": "tomatoes",
-    "category": "produce",
-    "store": "Fruit_Market",
-    "lists": ["wy1"]
-  },
-  {
     "name": "milk",
     "category": "fresh",
     "store": "Aldi",
@@ -60,7 +42,7 @@
     "store": "Coles",
     "lists": ["wy1"]
   },
-  { "name": "tea", "category": "beverages", "store": "Aldi", "lists": [] },
+  { "name": "tea", "category": "beverages", "store": "Aldi", "lists": ["wy1"] },
   {
     "name": "soft_drink",
     "category": "beverages",
@@ -157,20 +139,7 @@
     "description": "",
     "lists": ["wy1"]
   },
-  {
-    "name": "lettuce",
-    "category": "",
-    "store": "Aldi",
-    "description": "onions",
-    "lists": ["wy1"]
-  },
-  {
-    "name": "potatoes",
-    "category": "",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["wy1"]
-  },
+
   {
     "name": "diswashing_tablets",
     "category": "",
@@ -212,5 +181,89 @@
     "store": "Aldi",
     "description": "",
     "lists": ["wy1"]
+  },
+  {
+    "name": "onions",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "lettuce",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "tomatoes",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "carrots",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "apples",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "oranges",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "avocado",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "mandarines",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "bananas",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "red_onions",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "mushrooms",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
+  },
+  {
+    "name": "potatoes",
+    "category": "",
+    "store": "Fruit_Market",
+    "description": "",
+    "lists": ["fav1"]
   }
 ]

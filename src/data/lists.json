@@ -1,5 +1,6 @@
 [
   { "name": "weekly", "code": "wy1", "description": "Your weekly grocery shop" },
+  { "name": "fruit_&_veg", "code": "fav1", "description": "Fruit and vegetables" },
   { "name": "party_shop", "code": "ps2", "description": "Typical pary food" },
   { "name": "quick_shop", "code": "qs3", "description": "Just a few things for now" }
 ]

@@ -35,6 +35,11 @@
 
 [,
 { "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
+
+{ "name": "", "category": "", "store": "Fruit_Market", "description": "", "lists": ["fav1"]},
+{ "name": "", "category": "", "store": "Fruit_Market", "description": "", "lists": ["fav1"]},
+{ "name": "", "category": "", "store": "Fruit_Market", "description": "", "lists": ["fav1"]},
+{ "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
 { "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
 { "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
 { "name": "", "category": "", "store": "Aldi", "description": "", "lists": ["wy1"]},
