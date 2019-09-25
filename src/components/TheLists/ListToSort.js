@@ -48,7 +48,7 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={goShopping}>Let's Shop</button>
       </div>
-      <button className="homeButton" onClick={homePage}>HOME!</button>
+      <button className="homeButton" onClick={homePage}>BACK</button>
     </Fragment>
   )
 }
