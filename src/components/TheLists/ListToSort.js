@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { addList, homePage } from '../../actions'
 import { displayName } from '../../helpers'
 
-const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
+const ListToSort = props => {
+  const { chosen, items, lists, addList, goShop, homePage } = props
   const [checked, setChecked] = useState(true)
   const title = lists[chosen].name
 
-  function goShopping() {
+  function goShopping(go = true) {
     const inputs = document.querySelectorAll('input')
     const arrInputs = Array.from(inputs)
       .filter(item => item.checked)
@@ -16,7 +17,7 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
       item => arrInputs.indexOf(item.name) !== -1
     )
     addList(shoppingList)
-    func()
+    go && goShop()
   }
 
   function handleAddRemoveAll() {
@@ -38,7 +39,8 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
       })
   }
   function addMoreItems() {
-    
+    goShopping(false)
+    homePage()
   }
   const buttonTitle = checked ? 'Select' : 'Unselect'
   return (
@@ -52,7 +54,9 @@ const ListToSort = ({ chosen, items, lists, addList, func, homePage }) => {
         <button onClick={goShopping}>Let's Shop</button>
         <button onClick={addMoreItems}>Add more items</button>
       </div>
-      <button className="homeButton" onClick={homePage}>BACK</button>
+      <button className="homeButton" onClick={homePage}>
+        BACK
+      </button>
     </Fragment>
   )
 }
