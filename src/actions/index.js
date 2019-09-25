@@ -36,9 +36,12 @@ export function itemBought(name) {
 }
 
 export function addList(list) {
+  const newList = list.map(item => {
+    return {...item, done: false, skip: false}
+  })
   return {
     type: ADD_LIST,
-    payload: list
+    payload: newList
   }
 }
 
