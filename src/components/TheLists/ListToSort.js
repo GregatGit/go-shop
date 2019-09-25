@@ -4,9 +4,11 @@ import { addList, homePage } from '../../actions'
 import { displayName } from '../../helpers'
 
 const ListToSort = props => {
-  const { chosen, items, lists, addList, goShop, homePage } = props
+  const { chosen, items, lists, addList, goShop, homePage, mainList } = props
   const [checked, setChecked] = useState(true)
   const title = lists[chosen].name
+  const alreadyInList = mainList.map(item => item.name)
+  console.log(alreadyInList)
 
   function goShopping(go = true) {
     const inputs = document.querySelectorAll('input')
@@ -26,9 +28,10 @@ const ListToSort = props => {
     setChecked(!checked)
   }
 
-  function showItems(list, key) {
+  function showItems(list, key, list2) {
     return list
       .filter(item => item.lists.indexOf(key) !== -1)
+      .filter(item => list2.indexOf(item.name) === -1)
       .map(({ name }) => {
         return (
           <li className="checkboxFive" key={name}>
@@ -48,7 +51,7 @@ const ListToSort = props => {
       <h2>{title} List</h2>
       <h3>Select items for your shop</h3>
       <p>you can select all if needed</p>
-      <ul className="toSort">{showItems(items, chosen)}</ul>
+      <ul className="toSort">{showItems(items, chosen, alreadyInList)}</ul>
       <div className="shopAndAdd">
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={goShopping}>Let's Shop</button>
@@ -66,6 +69,7 @@ const mapStateToProps = (state, ownProps) => {
     chosen: state.chosen,
     items: state.items,
     lists: state.lists,
+    mainList: state.shoppingList
   }
 }
 
