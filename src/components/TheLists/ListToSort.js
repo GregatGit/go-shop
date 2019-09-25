@@ -8,7 +8,6 @@ const ListToSort = props => {
   const [checked, setChecked] = useState(true)
   const title = lists[chosen].name
   const alreadyInList = mainList.map(item => item.name)
-  console.log(alreadyInList)
 
   function goShopping(go = true) {
     const inputs = document.querySelectorAll('input')
