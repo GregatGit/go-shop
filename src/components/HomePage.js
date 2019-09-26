@@ -13,7 +13,6 @@ class HomePage extends React.Component {
     this.setState({show: name})
   }
   home = () => {
-    console.log('bang')
     this.setState({show: 'Lists'})
   }
   render() {
