@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { selectChosen } from '../actions'
 import { displayName } from '../helpers'
 
-const YourLists = ({ lists, selectChosen, home }) => {
+const YourLists = ({ lists, selectChosen, home, amount }) => {
   const [choosen, setChoosen] = useState(null)
 
   function handleListClick(name) {
@@ -39,7 +39,9 @@ const YourLists = ({ lists, selectChosen, home }) => {
           </button>
         </div>
       )}
+      <h3>ITEM IN YOUR LIST: {amount}</h3>
       <button className="homeButton" onClick={home}>HOME</button>
+      {amount ? <button className="homeButton" >GO SHOP</button> : ''}
     </Fragment>
   )
 }
@@ -47,6 +49,7 @@ const YourLists = ({ lists, selectChosen, home }) => {
 const mapStateToProps = (state, ownProps) => {
   return {
     lists: state.lists,
+    amount: state.shoppingList.length
   }
 }
 
