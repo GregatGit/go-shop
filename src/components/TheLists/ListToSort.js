@@ -29,13 +29,13 @@ const ListToSort = props => {
 
   function showItems(list, key, list2) {
     return list
-      .filter(item => item.lists.indexOf(key) !== -1)
-      .filter(item => list2.indexOf(item.name) === -1)
+      .filter(item => item.lists.indexOf(key) !== -1) // only from list
+      .filter(item => list2.indexOf(item.name) === -1) // not if already on shopping list
       .map(({ name }) => {
         return (
           <li className="checkboxFive" key={name}>
             <input type="checkbox" id={name} name={name} />
-            <label for={name}> {displayName(name)}</label>
+            <label htmlFor={name}> {displayName(name)}</label>
           </li>
         )
       })
@@ -47,7 +47,7 @@ const ListToSort = props => {
   const buttonTitle = checked ? 'Select' : 'Unselect'
   return (
     <Fragment>
-      <h2>{title} List</h2>
+      <h2>{displayName(title)} LIST</h2>
       <h3>Select items for your shop</h3>
       <p>you can select all if needed</p>
       <ul className="toSort">{showItems(items, chosen, alreadyInList)}</ul>
