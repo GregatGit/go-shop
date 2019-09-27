@@ -8,6 +8,7 @@ import Welcome from './Welcome'
 import YourLists from './YourLists'
 import TheList from './TheLists/Index'
 import List from './List'
+import ShoppingList from './ShoppingList'
 import './styles.scss'
 
 class HomePage extends Component {
@@ -23,17 +24,16 @@ class HomePage extends Component {
     return (
       <Fragment>
         <BrowserRouter>
-          <Route path='/' exact component={Welcome} />
-          <Route path='/lists' exact component={Lists} />
-          <Route path='/lists/:id' component={List} />
+          <Route path="/" exact component={Welcome} />
+          <Route path="/lists" exact component={Lists} />
+          <Route path="/lists/:id" component={List} />
+          <Route path="/shoppingList" component={ShoppingList} />
           <Footer />
         </BrowserRouter>
-        
       </Fragment>
     )
   }
 }
-
 
 const mapStateToProps = (state, ownProps) => {
   return {
