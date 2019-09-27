@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { selectChosen } from '../actions'
 import { displayName } from '../helpers'
@@ -10,8 +11,8 @@ const Lists = ({ lists, selectChosen, home, amount }) => {
       const display = displayName(lists[name].name)
       return (
         <li key={name}>
-          <button className="myButton">
-            {display}
+          <button  className="myButton">
+            <Link to={`/lists/${name}`}>{display}</Link>
           </button>
         </li>
       )
