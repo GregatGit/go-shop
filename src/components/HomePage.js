@@ -7,7 +7,7 @@ import Footer from './Footer'
 import Welcome from './Welcome'
 import YourLists from './YourLists'
 import TheList from './TheLists/Index'
-import Temp from './Temp'
+import List from './List'
 import './styles.scss'
 
 class HomePage extends Component {
@@ -24,8 +24,8 @@ class HomePage extends Component {
       <Fragment>
         <BrowserRouter>
           <Route path='/' exact component={Welcome} />
-          <Route path='/lists' component={Lists} />
-          <Route path='/lists/:id' component={Temp} />
+          <Route path='/lists' exact component={Lists} />
+          <Route path='/lists/:id' component={List} />
           <Footer />
         </BrowserRouter>
         
