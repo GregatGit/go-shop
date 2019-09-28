@@ -52,7 +52,7 @@ const List = props => {
         <button onClick={addSelectedItems}>Add Selected</button>
       </div>
       <button className="homeButton">
-        <Link to="/lists/">BACK</Link>
+        <Link to="/go-shop/lists/">BACK</Link>
       </button>
     </div>
   )

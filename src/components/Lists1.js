@@ -12,7 +12,7 @@ const Lists = ({ lists, selectChosen, home, amount }) => {
       return (
         <li key={name}>
           <button  className="myButton">
-            <Link to={`/lists/${name}`}>{display}</Link>
+            <Link to={`/go-shop/lists/${name}`}>{display}</Link>
           </button>
         </li>
       )

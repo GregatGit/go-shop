@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <footer>
       <button>
-        <Link to="/">HOME</Link>
+        <Link to="/go-shop/">HOME</Link>
       </button>
       <button>
-        <Link to="/lists">LISTS</Link>
+        <Link to="/go-shop/lists">LISTS</Link>
       </button>
       <button>MY LIST</button>
       <button>
-        <Link to="/shoppingList">LETS SHOP</Link>
+        <Link to="/go-shop/shoppingList">LETS SHOP</Link>
       </button>
     </footer>
   )

@@ -24,10 +24,10 @@ class HomePage extends Component {
     return (
       <Fragment>
         <BrowserRouter>
-          <Route path="/" exact component={Welcome} />
-          <Route path="/lists" exact component={Lists} />
-          <Route path="/lists/:id" component={List} />
-          <Route path="/shoppingList" component={ShoppingList} />
+          <Route path="/go-shop/" exact component={Welcome} />
+          <Route path="/go-shop/lists" exact component={Lists} />
+          <Route path="/go-shop/lists/:id" component={List} />
+          <Route path="/go-shop/shoppingList" component={ShoppingList} />
           <Footer />
         </BrowserRouter>
       </Fragment>
