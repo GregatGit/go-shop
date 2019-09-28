@@ -3,6 +3,7 @@
 # My Shopping List
 
 An App that makes shopping lists easy to create and easy to use.
+You can see it up and running and how it's doing so far by clicking [here](https://gregatgit.github.io/)
 
 ## Overview
 
