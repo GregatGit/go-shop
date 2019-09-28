@@ -5,6 +5,7 @@ import {
   homePage,
   completedList,
   emptyShoppingList,
+  undo
 } from '../actions'
 import { displayName } from '../helpers'
 
@@ -15,12 +16,15 @@ const ShoppingList = (props) => {
     homePage,
     completedList,
     emptyShoppingList,
+    undo
   } = props
   const [count, setCount] = useState(list.length)
   const [bought, setBought] = useState(0)
   const [showBought, setShowBought] = useState(false)
+  const [lastItem, setLastItem] = useState('')
 
   const itemClick = name => {
+    setLastItem(name)
     itemBought(name)
     setCount(count - 1)
     setBought(bought + 1)
@@ -52,6 +56,13 @@ const ShoppingList = (props) => {
   function handleBought() { 
     setShowBought(!showBought)
   }
+
+  function handleUndo() {
+    if (lastItem !== ''){
+      undo(lastItem)
+      setLastItem('')
+    }
+  }
   return (
     <div id="shoppingList">
       <h2>SHOPPING LIST</h2>
@@ -64,6 +75,7 @@ const ShoppingList = (props) => {
         <button onClick={done}>DONE</button>
       )}
       <div>
+        <button onClick={handleUndo}>undo</button>
         <button onClick={handleBought}>You bought {bought}</button>
       </div>
       <div>
@@ -81,5 +93,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
   mapStateToProps,
-  { itemBought, homePage, completedList, emptyShoppingList }
+  { itemBought, homePage, completedList, emptyShoppingList, undo }
 )(ShoppingList)

@@ -7,6 +7,14 @@ export const ITEM_BOUGHT = 'ITEM_BOUGHT'
 export const HOME_PAGE = 'HOME_PAGE'
 export const COMPLETED_LIST = 'COMPLETED_LIST'
 export const EMPTY_SHOPPINGLIST = 'EMPTY_SHOPPINGLIST'
+export const UNDO_LIST = 'UNDO_LIST'
+
+export function undo(name) {
+  return {
+    type: UNDO_LIST,
+    payload: name
+  }
+}
 
 export function emptyShoppingList() {
   return {

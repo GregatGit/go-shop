@@ -1,4 +1,4 @@
-import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST } from '../actions'
+import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST, UNDO_LIST } from '../actions'
 
 export default function (state = [], action) {
   
@@ -15,6 +15,18 @@ export default function (state = [], action) {
 
     case EMPTY_SHOPPINGLIST:
       return []
+    
+    case UNDO_LIST:
+      console.log(action)
+      const newState = [...state]
+      console.log(newState)
+      for (let i = 0; i < newState.length; i++){
+        if (newState[i].name === action.payload){
+          newState[i].done = false
+          return newState
+        }
+      }
+      return newState
       
     default:
       return state

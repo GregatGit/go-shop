@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { displayName } from '../helpers'
 
-const Lists = ({ lists, home, amount }) => {
+const Lists = ({ lists, amount }) => {
 
   const createListButton = list => {
     const listOfList = Object.keys(list)
