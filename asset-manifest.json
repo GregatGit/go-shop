@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/go-shop/static/css/main.f438615c.chunk.css",
-    "main.js": "/go-shop/static/js/main.97b998fa.chunk.js",
-    "main.js.map": "/go-shop/static/js/main.97b998fa.chunk.js.map",
+    "main.css": "/go-shop/static/css/main.16518d19.chunk.css",
+    "main.js": "/go-shop/static/js/main.ab862944.chunk.js",
+    "main.js.map": "/go-shop/static/js/main.ab862944.chunk.js.map",
     "runtime~main.js": "/go-shop/static/js/runtime~main.882f2166.js",
     "runtime~main.js.map": "/go-shop/static/js/runtime~main.882f2166.js.map",
-    "static/js/2.438e4f23.chunk.js": "/go-shop/static/js/2.438e4f23.chunk.js",
-    "static/js/2.438e4f23.chunk.js.map": "/go-shop/static/js/2.438e4f23.chunk.js.map",
+    "static/js/2.f4423c87.chunk.js": "/go-shop/static/js/2.f4423c87.chunk.js",
+    "static/js/2.f4423c87.chunk.js.map": "/go-shop/static/js/2.f4423c87.chunk.js.map",
     "index.html": "/go-shop/index.html",
-    "precache-manifest.ee3d2d63b29a2ae3cbec3ba0f5e0a989.js": "/go-shop/precache-manifest.ee3d2d63b29a2ae3cbec3ba0f5e0a989.js",
+    "precache-manifest.b8bbf2433d79fad6490ad01286372656.js": "/go-shop/precache-manifest.b8bbf2433d79fad6490ad01286372656.js",
     "service-worker.js": "/go-shop/service-worker.js",
-    "static/css/main.f438615c.chunk.css.map": "/go-shop/static/css/main.f438615c.chunk.css.map"
+    "static/css/main.16518d19.chunk.css.map": "/go-shop/static/css/main.16518d19.chunk.css.map"
   }
 }
