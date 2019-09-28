@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Lists from './Lists'
 import Footer from './Footer'
 import Welcome from './Welcome'
+import MyList from './MyList'
 import List from './List'
 import ShoppingList from './ShoppingList'
 import './styles.scss'
@@ -18,6 +19,7 @@ class HomePage extends Component {
           <Route path="/go-shop/" exact component={Welcome} />
           <Route path="/go-shop/lists" exact component={Lists} />
           <Route path="/go-shop/lists/:id" component={List} />
+          <Route path="/go-shop/myList" component={MyList} />
           <Route path="/go-shop/shoppingList" component={ShoppingList} />
           <Footer />
         </BrowserRouter>

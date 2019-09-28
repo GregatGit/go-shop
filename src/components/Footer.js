@@ -10,7 +10,7 @@ const Footer = () => {
       <button>
         <Link to="/go-shop/lists">LISTS</Link>
       </button>
-      <button>MY LIST</button>
+      <button><Link to="/go-shop/myList">MY LIST</Link></button>
       <button>
         <Link to="/go-shop/shoppingList">LETS SHOP</Link>
       </button>
