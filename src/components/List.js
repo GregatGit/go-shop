@@ -1,11 +1,12 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addList, homePage } from '../actions'
 import { displayName } from '../helpers'
+import './listStyle.scss'
 
 const List = props => {
-  const { items, lists, addList, homePage, mainList } = props
+  const { items, lists, addList, mainList } = props
   const id = props.match.params.id
   const [checked, setChecked] = useState(true)
 
@@ -15,7 +16,7 @@ const List = props => {
       .filter(item => list2.indexOf(item.name) === -1) // not if already on shopping list
       .map(({ name }) => {
         return (
-          <li className="checkboxFive" key={name}>
+          <li key={name}>
             <input type="checkbox" id={name} name={name} />
             <label htmlFor={name}> {displayName(name)}</label>
           </li>
@@ -45,7 +46,7 @@ const List = props => {
   return (
     <div>
       <h2>{displayName(lists[id].name)} LIST</h2>
-      <ul>{showItems(items, id, alreadyInList)}</ul>
+      <ul className="checkboxFive">{showItems(items, id, alreadyInList)}</ul>
       <div className="shopAndAdd">
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={addSelectedItems}>Add Selected</button>
