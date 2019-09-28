@@ -17,9 +17,8 @@ export default function (state = [], action) {
       return []
     
     case UNDO_LIST:
-      console.log(action)
       const newState = [...state]
-      console.log(newState)
+ 
       for (let i = 0; i < newState.length; i++){
         if (newState[i].name === action.payload){
           newState[i].done = false
