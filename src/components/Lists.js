@@ -1,28 +1,43 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { selectChosen } from '../actions'
+import { displayName } from '../helpers'
 
-const Lists = ({ name, func }) => {
+const Lists = ({ lists, selectChosen, home, amount }) => {
+
+  const createListButton = list => {
+    const listOfList = Object.keys(list)
+    return listOfList.map(name => {
+      const display = displayName(lists[name].name)
+      return (
+        <li key={name}>
+          <button className="myButton">
+            <Link to={`/go-shop/lists/${name}`}>{display}</Link>
+          </button>
+        </li>
+      )
+    })
+  }
+
   return (
     <div>
-      <h2>Hi {name}</h2>
-      <ul className="myList">
-      <li>
-          <button className="myButton" onClick={() => func('YourLists')}>YOUR LISTS</button>
-        </li>
-        <li>
-          <button className="myButtonOff">QUICK LISTS</button>
-        </li>
-        <li>
-          <button className="myButtonOff">MAKE A LIST</button>
-        </li>
-        <li>
-          <button className="myButtonOff">IMPORT A LIST</button>
-        </li>
-        <li>
-          <button className="myButtonOff">SEND A LIST</button>
-        </li>
-      </ul>
+      <h2>LISTS</h2>
+      <h3>press to see items in list</h3>
+      <p>they won't show if they are already on your list</p>
+      {createListButton(lists)}
     </div>
   )
 }
 
-export default Lists
+const mapStateToProps = (state, ownProps) => {
+  return {
+    lists: state.lists,
+    amount: state.shoppingList.length
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  { selectChosen }
+)(Lists)
