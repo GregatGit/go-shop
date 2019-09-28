@@ -5,13 +5,14 @@ import { selectChosen } from '../actions'
 import { displayName } from '../helpers'
 
 const Lists = ({ lists, selectChosen, home, amount }) => {
+
   const createListButton = list => {
     const listOfList = Object.keys(list)
     return listOfList.map(name => {
       const display = displayName(lists[name].name)
       return (
         <li key={name}>
-          <button  className="myButton">
+          <button className="myButton">
             <Link to={`/go-shop/lists/${name}`}>{display}</Link>
           </button>
         </li>
