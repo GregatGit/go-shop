@@ -1,5 +1,4 @@
 
-export const LIST_CHOSEN = 'LIST_CHOSEN'
 export const LIST_FILTER = 'LIST_FILTER'
 export const STATUS_IS_BOUGHT = 'STATUS_IS_BOUGHT'
 export const STATUS_IS_SKIP = 'STATUS_IS_SKIP'
@@ -42,13 +41,6 @@ export function addList(list) {
   return {
     type: ADD_LIST,
     payload: newList
-  }
-}
-
-export const selectChosen = (listName) => {
-  return {
-    type: LIST_CHOSEN,
-    payload: listName
   }
 }
 

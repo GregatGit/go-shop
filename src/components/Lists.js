@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { selectChosen } from '../actions'
 import { displayName } from '../helpers'
 
-const Lists = ({ lists, selectChosen, home, amount }) => {
+const Lists = ({ lists, home, amount }) => {
 
   const createListButton = list => {
     const listOfList = Object.keys(list)
@@ -37,7 +36,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  { selectChosen }
-)(Lists)
+export default connect(mapStateToProps)(Lists)
