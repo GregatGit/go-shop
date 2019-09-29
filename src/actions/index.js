@@ -3,11 +3,19 @@ export const LIST_FILTER = 'LIST_FILTER'
 export const STATUS_IS_BOUGHT = 'STATUS_IS_BOUGHT'
 export const STATUS_IS_SKIP = 'STATUS_IS_SKIP'
 export const ADD_LIST = 'ADD_LIST'
-export const ITEM_BOUGHT = 'ITEM_BOUGHT'
 export const HOME_PAGE = 'HOME_PAGE'
+export const ITEM_BOUGHT = 'ITEM_BOUGHT'
+export const TOGGLE_ITEM_DONE = 'TOGGLE_ITEM_DONE'
 export const COMPLETED_LIST = 'COMPLETED_LIST'
 export const EMPTY_SHOPPINGLIST = 'EMPTY_SHOPPINGLIST'
 export const UNDO_LIST = 'UNDO_LIST'
+
+export function toggleItemDone(index) {
+  return {
+    type: TOGGLE_ITEM_DONE,
+    payload: index
+  }
+}
 
 export function undo(name) {
   return {
