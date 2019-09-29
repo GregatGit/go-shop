@@ -1,11 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const MyList = ({list}) => {
+const MyList = ({ list }) => {
   function displayItems(list) {
-    return list.map(item => {
+    return list.map(({ name, done }, index) => {
+      let checked = done
       return (
-        <li key={item}>{item.name}</li>
+        <li key={index}>
+          <p>{name}</p>
+          <div>
+            <input type="checkbox" id="done" name="done" checked={checked} />
+            <label htmlFor="done">done</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="remove" name="remove" />
+            <label htmlFor="remove">remove </label>
+          </div>
+        </li>
       )
     })
   }
@@ -13,17 +25,20 @@ const MyList = ({list}) => {
     <div>
       <h2>YOUR LIST</h2>
       <p>Use the buttons to remove items or mark them as done.</p>
-      <p>You must click on CHANGE LIST before you leave this page</p>
-      <ul>
-        {list.length ? displayItems(list) : 'your list is empty'}
-      </ul>
+      <p>
+        Remove takes them off the list completely and will put it into your done
+        items or put back on list to get.
+      </p>
+      <p>You must click on UPDATE LIST before you leave this page</p>
+      <ul>{list.length ? displayItems(list) : 'your list is empty'}</ul>
+      <button>UPDATE LIST</button>
     </div>
   )
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    list: state.shoppingList
+    list: state.shoppingList,
   }
 }
 export default connect(mapStateToProps)(MyList)
