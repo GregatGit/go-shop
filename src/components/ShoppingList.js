@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import {
   itemBought,
@@ -22,6 +22,17 @@ const ShoppingList = (props) => {
   const [bought, setBought] = useState(0)
   const [showBought, setShowBought] = useState(false)
   const [lastItem, setLastItem] = useState('')
+
+  useEffect(() => {
+    let amount = 0
+    for (let i = 0; i < list.length; i++){
+      if (!list[i].done){
+        amount++
+      }
+    }
+    setCount(amount)
+    setBought(list.length - amount)
+  }, [])
 
   const itemClick = name => {
     setLastItem(name)
