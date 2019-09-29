@@ -4,16 +4,15 @@ import { connect } from 'react-redux'
 import { displayName } from '../helpers'
 
 const Lists = ({ lists, amount }) => {
-
   const createListButton = list => {
     const listOfList = Object.keys(list)
     return listOfList.map(name => {
       const display = displayName(lists[name].name)
       return (
         <li key={name}>
-          <button className="myButton">
-            <Link to={`/go-shop/lists/${name}`}>{display}</Link>
-          </button>
+          <Link to={`/go-shop/lists/${name}`}>
+            <button className="myButton">{display}</button>
+          </Link>
         </li>
       )
     })
@@ -32,7 +31,7 @@ const Lists = ({ lists, amount }) => {
 const mapStateToProps = (state, ownProps) => {
   return {
     lists: state.lists,
-    amount: state.shoppingList.length
+    amount: state.shoppingList.length,
   }
 }
 

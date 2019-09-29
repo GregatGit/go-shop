@@ -4,16 +4,18 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer>
-      <button>
-        <Link to="/go-shop/">HOME</Link>
-      </button>
-      <button>
-        <Link to="/go-shop/lists">LISTS</Link>
-      </button>
-      <button><Link to="/go-shop/myList">MY LIST</Link></button>
-      <button>
-        <Link to="/go-shop/shoppingList">LETS SHOP</Link>
-      </button>
+      <Link to="/go-shop/">
+        <button>HOME</button>
+      </Link>
+      <Link to="/go-shop/lists">
+        <button>LISTS</button>
+      </Link>
+      <Link to="/go-shop/myList">
+        <button>MY LIST</button>
+      </Link>
+      <Link to="/go-shop/shoppingList">
+        <button>LETS SHOP</button>
+      </Link>
     </footer>
   )
 }

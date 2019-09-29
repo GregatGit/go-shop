@@ -51,9 +51,9 @@ const List = props => {
         <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
         <button onClick={addSelectedItems}>Add Selected</button>
       </div>
-      <button className="homeButton">
-        <Link to="/go-shop/lists/">BACK</Link>
-      </button>
+      
+        <Link to="/go-shop/lists/"><button className="homeButton">BACK</button></Link>
+      
     </div>
   )
 }
