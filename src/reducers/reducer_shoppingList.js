@@ -1,4 +1,4 @@
-import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST, UNDO_LIST, TOGGLE_ITEM_DONE } from '../actions'
+import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST, UNDO_LIST, TOGGLE_ITEM_DONE, ITEM_DELETE } from '../actions'
 
 export default function (state = [], action) {
   
@@ -31,6 +31,11 @@ export default function (state = [], action) {
       const toggleState = [...state]
       toggleState[action.payload].done = !toggleState[action.payload].done
       return toggleState
+
+    case ITEM_DELETE:
+      const delItemState = [...state]
+      delItemState.splice(action.payload, 1)
+      return delItemState
 
     default:
       return state

@@ -1,23 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleItemDone } from '../actions'
+import { toggleItemDone, itemDelete } from '../actions'
 
-const MyList = ({ list, toggleItemDone }) => {
+const MyList = ({ list, toggleItemDone, itemDelete }) => {
 
-
-
-  function displayItems(list, func) {
+  function displayItems(list, funcCheckbox, funcBttn) {
     return list.map(({ name, done }, index) => {
       return (
         <li key={index}>
           <p>{name}</p>
           <div>
-            <input onChange={() => func(index)} type="checkbox" id="done" name="done" defaultChecked={done} />
+            <input onChange={() => funcCheckbox(index)} type="checkbox" id="done" name="done" defaultChecked={done} />
             <label htmlFor="done">done</label>
           </div>
 
           <div>
-            <button>remove</button>
+            <button onClick={() => funcBttn(index)}>remove</button>
           </div>
         </li>
       )
@@ -31,7 +29,7 @@ const MyList = ({ list, toggleItemDone }) => {
         Remove deletes them completely.
       </p>
       <p>Done chang the status of the item</p>
-      <ul>{list.length ? displayItems(list, toggleItemDone) : 'your list is empty'}</ul>
+      <ul>{list.length ? displayItems(list, toggleItemDone, itemDelete) : 'your list is empty'}</ul>
       <button>UPDATE LIST</button>
     </div>
   )
@@ -42,4 +40,4 @@ const mapStateToProps = (state, ownProps) => {
     list: state.shoppingList,
   }
 }
-export default connect(mapStateToProps, { toggleItemDone })(MyList)
+export default connect(mapStateToProps, { toggleItemDone, itemDelete })(MyList)
