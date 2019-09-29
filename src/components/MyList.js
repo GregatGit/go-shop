@@ -4,12 +4,11 @@ import { connect } from 'react-redux'
 const MyList = ({ list }) => {
   function displayItems(list) {
     return list.map(({ name, done }, index) => {
-      let checked = done
       return (
         <li key={index}>
           <p>{name}</p>
           <div>
-            <input type="checkbox" id="done" name="done" checked={checked} />
+            <input type="checkbox" id="done" name="done" defaultChecked={done} />
             <label htmlFor="done">done</label>
           </div>
 
