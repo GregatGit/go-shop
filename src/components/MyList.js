@@ -30,7 +30,6 @@ const MyList = ({ list, toggleItemDone, itemDelete }) => {
       </p>
       <p>Done chang the status of the item</p>
       <ul>{list.length ? displayItems(list, toggleItemDone, itemDelete) : 'your list is empty'}</ul>
-      <button>UPDATE LIST</button>
     </div>
   )
 }
