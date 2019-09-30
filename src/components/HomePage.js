@@ -7,7 +7,6 @@ import Welcome from './Welcome'
 import MyList from './MyList'
 import List from './List'
 import ShoppingList from './ShoppingList'
-import './styles.scss'
 
 class HomePage extends Component {
 
