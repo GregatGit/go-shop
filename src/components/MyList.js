@@ -23,7 +23,7 @@ const MyList = ({ list, toggleItemDone, itemDelete, emptyShoppingList }) => {
   }
   return (
     <div>
-      <h2>YOUR LIST</h2>
+      <h1>YOUR LIST</h1>
       <p>Here you can edit your list.</p>
       <p>
         Items can be marked as bought or not.

@@ -76,7 +76,7 @@ const ShoppingList = (props) => {
   }
   return (
     <div id="shoppingList">
-      <h2>SHOPPING LIST</h2>
+      <h1>SHOPPING LIST</h1>
       <ul>{list && displayList(list)}</ul>
       {count > 0 ? (
         <p>

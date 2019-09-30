@@ -13,7 +13,7 @@ class HomePage extends Component {
     return (
       <Fragment>
         <BrowserRouter>
-        <Header />
+          <Header />
           <Route path="/" exact component={Welcome} />
           <Route path="/go-shop/" exact component={Welcome} />
           <Route path="/go-shop/lists" exact component={Lists} />

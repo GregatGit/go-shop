@@ -61,7 +61,7 @@ export default function SimpleTabs() {
 
           <Tab label="Lists" {...a11yProps(1)} component={Link} to="/go-shop/lists" />
 
-          <Tab label="My Lists" {...a11yProps(2)} component={Link} to="/go-shop/myList"/>
+          <Tab label="My List" {...a11yProps(2)} component={Link} to="/go-shop/myList"/>
 
           <Tab label="Let's Shop" {...a11yProps(3)} component={Link} to="/go-shop/shoppingList"/>
         </Tabs>
