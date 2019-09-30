@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addList, homePage } from '../actions'
 import { displayName } from '../helpers'
-import './listStyle.scss'
 
 const List = props => {
   const { items, lists, addList, mainList } = props
