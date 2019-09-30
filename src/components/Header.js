@@ -57,18 +57,13 @@ export default function SimpleTabs() {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Link to="/go-shop/">
-            <Tab label="Home" {...a11yProps(0)} />
-          </Link>
-          <Link to="/go-shop/lists">
-            <Tab label="Lists" {...a11yProps(1)} />
-          </Link>
-          <Link to="/go-shop/myList">
-            <Tab label="My Lists" {...a11yProps(2)} />
-          </Link>
-          <Link to="/go-shop/shoppingList">
-            <Tab label="Let's Shop" {...a11yProps(3)} />
-          </Link>
+          <Tab label="Home" {...a11yProps(0)} component={Link} to="/go-shop/"/>
+
+          <Tab label="Lists" {...a11yProps(1)} component={Link} to="/go-shop/lists" />
+
+          <Tab label="My Lists" {...a11yProps(2)} component={Link} to="/go-shop/myList"/>
+
+          <Tab label="Let's Shop" {...a11yProps(3)} component={Link} to="/go-shop/shoppingList"/>
         </Tabs>
       </AppBar>
     </div>
