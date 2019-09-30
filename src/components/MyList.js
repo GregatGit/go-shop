@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toggleItemDone, itemDelete } from '../actions'
+import { toggleItemDone, itemDelete, emptyShoppingList } from '../actions'
 
-const MyList = ({ list, toggleItemDone, itemDelete }) => {
+const MyList = ({ list, toggleItemDone, itemDelete, emptyShoppingList }) => {
 
   function displayItems(list, funcCheckbox, funcBttn) {
     return list.map(({ name, done }, index) => {
@@ -33,6 +33,9 @@ const MyList = ({ list, toggleItemDone, itemDelete }) => {
       </p>
 
       <ul>{list.length ? displayItems(list, toggleItemDone, itemDelete) : <p><u>your list is empty</u></p>}</ul>
+      <h3>warning: this will clear your list</h3>
+      <button onClick={emptyShoppingList}>DELETE ALL</button>
+      <p>buffer</p>
     </div>
   )
 }
@@ -42,4 +45,4 @@ const mapStateToProps = (state, ownProps) => {
     list: state.shoppingList,
   }
 }
-export default connect(mapStateToProps, { toggleItemDone, itemDelete })(MyList)
+export default connect(mapStateToProps, { toggleItemDone, itemDelete, emptyShoppingList })(MyList)
