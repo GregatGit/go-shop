@@ -3,8 +3,20 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addList, homePage } from '../actions'
 import { displayName } from '../helpers'
+import { makeStyles } from '@material-ui/core/styles'
+import { Button } from '@material-ui/core'
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
+}))
 
 const List = props => {
+  const classes = useStyles()
   const { items, lists, addList, mainList } = props
   const id = props.match.params.id
   const [checked, setChecked] = useState(true)
@@ -47,11 +59,11 @@ const List = props => {
       <h2>{displayName(lists[id].name)} LIST</h2>
       <ul className="checkboxFive">{showItems(items, id, alreadyInList)}</ul>
       <div className="shopAndAdd">
-        <button onClick={handleAddRemoveAll}>{buttonTitle} All</button>
-        <button onClick={addSelectedItems}>Add Selected</button>
+      <Button variant="contained" color="primary" className={classes.button} onClick={handleAddRemoveAll}>{buttonTitle} All</Button>
+      <Button variant="contained" color="primary" className={classes.button} onClick={addSelectedItems}>Add Selected</Button>
       </div>
       
-        <Link to="/go-shop/lists/"><button className="homeButton">BACK</button></Link>
+        <Link to="/go-shop/lists/"><Button variant="contained"  className={classes.button} className="homeButton">BACK</Button></Link>
       
     </div>
   )
