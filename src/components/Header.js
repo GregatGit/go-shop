@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Footer = () => {
+const Header = () => {
   return (
-    <footer>
+    <header>
       <Link to="/go-shop/">
         <button>HOME</button>
       </Link>
@@ -16,8 +16,8 @@ const Footer = () => {
       <Link to="/go-shop/shoppingList">
         <button>LETS SHOP</button>
       </Link>
-    </footer>
+    </header>
   )
 }
 
-export default Footer
+export default Header
