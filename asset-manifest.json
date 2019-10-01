@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/go-shop/static/css/main.16518d19.chunk.css",
-    "main.js": "/go-shop/static/js/main.ccaa5a0c.chunk.js",
-    "main.js.map": "/go-shop/static/js/main.ccaa5a0c.chunk.js.map",
+    "main.js": "/go-shop/static/js/main.6c404c35.chunk.js",
+    "main.js.map": "/go-shop/static/js/main.6c404c35.chunk.js.map",
     "runtime~main.js": "/go-shop/static/js/runtime~main.882f2166.js",
     "runtime~main.js.map": "/go-shop/static/js/runtime~main.882f2166.js.map",
-    "static/js/2.f4423c87.chunk.js": "/go-shop/static/js/2.f4423c87.chunk.js",
-    "static/js/2.f4423c87.chunk.js.map": "/go-shop/static/js/2.f4423c87.chunk.js.map",
+    "static/js/2.12c6c86d.chunk.js": "/go-shop/static/js/2.12c6c86d.chunk.js",
+    "static/js/2.12c6c86d.chunk.js.map": "/go-shop/static/js/2.12c6c86d.chunk.js.map",
     "index.html": "/go-shop/index.html",
-    "precache-manifest.6ba078efbca54f250cdce6674978b6d4.js": "/go-shop/precache-manifest.6ba078efbca54f250cdce6674978b6d4.js",
-    "service-worker.js": "/go-shop/service-worker.js",
-    "static/css/main.16518d19.chunk.css.map": "/go-shop/static/css/main.16518d19.chunk.css.map"
+    "precache-manifest.947e1f780ba840b6a54076938c561f73.js": "/go-shop/precache-manifest.947e1f780ba840b6a54076938c561f73.js",
+    "service-worker.js": "/go-shop/service-worker.js"
   }
 }
