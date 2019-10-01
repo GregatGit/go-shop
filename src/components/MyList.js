@@ -10,8 +10,8 @@ const MyList = ({ list, toggleItemDone, itemDelete, emptyShoppingList }) => {
         <li key={index}>
           <p>{name}</p>
           <div>
-            <input onChange={() => funcCheckbox(index)} type="checkbox" id="done" name="done" defaultChecked={done} />
-            <label htmlFor="done">done</label>
+            <input onChange={() => funcCheckbox(index)} type="checkbox" id={name} name={name} defaultChecked={done} />
+            <label htmlFor={name}>done</label>
           </div>
 
           <div>
