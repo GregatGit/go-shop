@@ -87,6 +87,7 @@ function ShoppingList(props) {
 
   return (
     <Fragment>
+    <h1>SHOPPING TIME</h1>
     <List component="nav" className={classes.root} aria-label="mailbox folders">
       {list && displayList(list)}
       {count > 0 ? (
