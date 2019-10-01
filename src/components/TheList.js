@@ -90,7 +90,6 @@ const TheList = props => {
         <Button
           variant="contained"
           className={classes.button}
-          className="homeButton"
         >
           BACK
         </Button>
