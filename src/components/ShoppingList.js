@@ -1,22 +1,39 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { connect } from 'react-redux'
 import {
   itemBought,
   homePage,
   completedList,
   emptyShoppingList,
-  undo
+  undo,
 } from '../actions'
 import { displayName } from '../helpers'
+import { makeStyles } from '@material-ui/core/styles'
+import {
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+  Button,
+} from '@material-ui/core'
 
-const ShoppingList = (props) => {
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+  },
+}))
+
+function ShoppingList(props) {
+  const classes = useStyles()
   const {
     list,
     itemBought,
     homePage,
     completedList,
     emptyShoppingList,
-    undo
+    undo,
   } = props
   const [count, setCount] = useState(list.length)
   const [bought, setBought] = useState(0)
@@ -34,38 +51,30 @@ const ShoppingList = (props) => {
     setBought(list.length - amount)
   }, [])
 
+  const displayList = sList => {
+    return sList
+      .filter(item => !item.done)
+      .map(({ name }) => {
+        return (
+          <Fragment>
+            <ListItem button key={name} onClick={() => itemClick(name)}>
+              <ListItemText primary={displayName(name)} />
+            </ListItem>
+            <Divider />
+          </Fragment>
+        )
+      })
+  }
   const itemClick = name => {
     setLastItem(name)
     itemBought(name)
     setCount(count - 1)
     setBought(bought + 1)
   }
-
   const done = () => {
     completedList(list)
     emptyShoppingList()
     homePage()
-  }
-  const displayList = sList => {
-    return sList
-      .filter(item => !item.done)
-      .map(({ name }) => {
-        return (
-          <li className="sList" key={name}>
-            <button onClick={() => itemClick(name)}>{displayName(name)}</button>
-          </li>
-        )
-      })
-  }
-  const displayBought = list => {
-    return list
-      .filter(item => item.done)
-      .map(item => {
-        return <li key={item.name}>{displayName(item.name)}</li>
-      })
-  }
-  function handleBought() { 
-    setShowBought(!showBought)
   }
 
   function handleUndo() {
@@ -75,25 +84,24 @@ const ShoppingList = (props) => {
       setCount(count + 1)
     }
   }
+
   return (
-    <div id="shoppingList">
-      <h1>SHOPPING LIST</h1>
-      <ul>{list && displayList(list)}</ul>
+    <Fragment>
+    <List component="nav" className={classes.root} aria-label="mailbox folders">
+      {list && displayList(list)}
       {count > 0 ? (
         <p>
           items left: <b>{count}</b>
         </p>
       ) : (
-        <button onClick={done}>DONE</button>
+        <Button onClick={done}>DONE</Button>
       )}
-      <div>
-        <button onClick={handleUndo}>undo</button>
-        <button onClick={handleBought}>You bought {bought}</button>
-      </div>
-      <div>
-        {showBought ? displayBought(list) : 'click to see items bought'}
-      </div>
-    </div>
+    </List>
+    <div>
+    <Button onClick={handleUndo}>undo</Button>
+    <Button >You bought {bought}</Button>
+  </div>
+    </Fragment>
   )
 }
 
