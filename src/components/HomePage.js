@@ -15,6 +15,7 @@ import ShoppingList from './ShoppingList'
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(3, 2),
+    marginTop: 50
   },
 }))
 

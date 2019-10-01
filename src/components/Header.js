@@ -51,7 +51,7 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Tabs
           value={value}
           onChange={handleChange}
