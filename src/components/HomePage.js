@@ -6,6 +6,7 @@ import Header from './Header'
 import Welcome from './Welcome'
 import MyList from './MyList'
 import List from './List'
+import TheList from './TheList'
 import ShoppingList from './ShoppingList'
 
 class HomePage extends Component {
@@ -17,7 +18,7 @@ class HomePage extends Component {
           <Route path="/" exact component={Welcome} />
           <Route path="/go-shop/" exact component={Welcome} />
           <Route path="/go-shop/lists" exact component={Lists} />
-          <Route path="/go-shop/lists/:id" component={List} />
+          <Route path="/go-shop/lists/:id" component={TheList} />
           <Route path="/go-shop/myList" component={MyList} />
           <Route path="/go-shop/shoppingList" component={ShoppingList} />
         </BrowserRouter>

@@ -4,9 +4,18 @@ import { Link } from 'react-router-dom'
 import { addList, homePage } from '../actions'
 import { displayName } from '../helpers'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button } from '@material-ui/core'
+import { Button, List, ListItem, ListItemText } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+  },
+  checkbox: {
+    color: 'red',
+    margin: '10px'
+  },
   button: {
     margin: theme.spacing(1),
   },
@@ -15,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const List = props => {
+const TheList = props => {
   const classes = useStyles()
   const { items, lists, addList, mainList } = props
   const id = props.match.params.id
@@ -27,10 +36,10 @@ const List = props => {
       .filter(item => list2.indexOf(item.name) === -1) // not if already on shopping list
       .map(({ name }) => {
         return (
-          <li key={name}>
-            <input type="checkbox" id={name} name={name} />
-            <label htmlFor={name}> {displayName(name)}</label>
-          </li>
+          <ListItem  key={name}>
+            <input className={classes.checkbox} type="checkbox" id={name} name={name} />
+            <label htmlFor={name}> <ListItemText id={name} primary={displayName(name)} /></label>
+          </ListItem>
         )
       })
   }
@@ -57,7 +66,6 @@ const List = props => {
   return (
     <div>
       <h2>{displayName(lists[id].name)} LIST</h2>
-      <ul className="checkboxFive">{showItems(items, id, alreadyInList)}</ul>
       <div className="shopAndAdd">
         <Button
           variant="contained"
@@ -76,6 +84,7 @@ const List = props => {
           Add Selected
         </Button>
       </div>
+      <List dense className={classes.root}>{showItems(items, id, alreadyInList)}</List>
 
       <Link to="/go-shop/lists/">
         <Button
@@ -101,4 +110,4 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(
   mapStateToProps,
   { addList, homePage }
-)(List)
+)(TheList)
