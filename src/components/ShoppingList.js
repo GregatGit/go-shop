@@ -72,6 +72,7 @@ const ShoppingList = (props) => {
     if (lastItem !== ''){
       undo(lastItem)
       setLastItem('')
+      setCount(count + 1)
     }
   }
   return (
