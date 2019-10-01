@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
+  items: {
+    maxWidth: '35%'
+  }
 }))
 
 function ShoppingList(props) {
@@ -57,7 +60,7 @@ function ShoppingList(props) {
       .map(({ name }) => {
         return (
           <Fragment>
-            <ListItem button key={name} onClick={() => itemClick(name)}>
+            <ListItem className={classes.items} button key={name} onClick={() => itemClick(name)}>
               <ListItemText primary={displayName(name)} />
             </ListItem>
             <Divider />
