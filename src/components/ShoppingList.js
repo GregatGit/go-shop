@@ -40,7 +40,6 @@ function ShoppingList(props) {
   } = props
   const [count, setCount] = useState(list.length)
   const [bought, setBought] = useState(0)
-  const [showBought, setShowBought] = useState(false)
   const [lastItem, setLastItem] = useState('')
 
   useEffect(() => {
