@@ -41,7 +41,7 @@ const Lists = ({ lists, amount }) => {
     <div>
       <h1>LISTS</h1>
       <h3>press to see items in list</h3>
-      <p>they won't show if they are already on your list</p>
+      <p>items won't show if they are already on your list</p>
       <List>{createListButton(lists)}</List>
     </div>
   )
