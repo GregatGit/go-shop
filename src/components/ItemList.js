@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles, makeStyles } from '@material-ui/core/styles'
 import { green } from '@material-ui/core/colors'
 import {Radio, Button} from '@material-ui/core/'
 import { displayName } from '../helpers'
 import { toggleItemDone, itemDelete } from '../actions'
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+  input: {
+    display: 'none',
+  },
+}));
+
 
 const GreenRadio = withStyles({
   root: {
@@ -16,7 +26,8 @@ const GreenRadio = withStyles({
   checked: {},
 })(props => <Radio color="default" {...props} />)
 
-function ItemList( { status = true, name = 'Beans', toggleItemDone, itemDelete, index }) {
+function ItemList( { status, name, toggleItemDone, itemDelete, index }) {
+  const classes = useStyles()
   const [selectedValue, setSelectedValue] = useState('green')
 
 
@@ -25,10 +36,6 @@ function ItemList( { status = true, name = 'Beans', toggleItemDone, itemDelete, 
       setSelectedValue('red')
     }
   }, [])
-
-  // function toggle(i) {
-  //   toggleItemDone(i)
-  // }
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value)
@@ -55,7 +62,7 @@ function ItemList( { status = true, name = 'Beans', toggleItemDone, itemDelete, 
       />
       
     </div>
-    <Button onClick={() => itemDelete(index)}>Remove</Button>
+    <Button variant="contained" className={classes.button} color="secondary" onClick={() => itemDelete(index)}>Remove</Button>
     </li>
   )
 }

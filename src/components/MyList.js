@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {  emptyShoppingList } from '../actions'
 import ItemList from './ItemList'
-import { List } from '@material-ui/core'
+import { List, Button } from '@material-ui/core'
 
 const MyList = ({ list, emptyShoppingList }) => {
 
@@ -31,7 +31,7 @@ const MyList = ({ list, emptyShoppingList }) => {
 
       <List>{list.length ? displayItems(list) : <p><u>your list is empty</u></p>}</List>
       <h3>warning: this will clear your list</h3>
-      <button onClick={emptyShoppingList}>DELETE ALL</button>
+      <Button variant="contained" onClick={emptyShoppingList}>DELETE ALL</Button>
     </div>
   )
 }
