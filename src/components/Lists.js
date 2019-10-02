@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { displayName } from '../helpers'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button } from '@material-ui/core'
+import { Button, List, ListItem } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -22,7 +22,7 @@ const Lists = ({ lists, amount }) => {
     return listOfList.map(name => {
       const display = displayName(lists[name].name)
       return (
-        <li key={name}>
+        <ListItem key={name}>
           <Link to={`/go-shop/lists/${name}`}>
             <Button
               variant="contained"
@@ -32,7 +32,7 @@ const Lists = ({ lists, amount }) => {
               {display}
             </Button>
           </Link>
-        </li>
+        </ListItem>
       )
     })
   }
@@ -42,7 +42,7 @@ const Lists = ({ lists, amount }) => {
       <h1>LISTS</h1>
       <h3>press to see items in list</h3>
       <p>they won't show if they are already on your list</p>
-      {createListButton(lists)}
+      <List>{createListButton(lists)}</List>
     </div>
   )
 }
