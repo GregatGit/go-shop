@@ -9,11 +9,12 @@ import Welcome from './Welcome'
 import MyList from './MyList'
 import TheList from './TheList'
 import ShoppingList from './ShoppingList'
+import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(3, 2),
-    marginTop: 50
+    marginTop: 50,
   },
 }))
 
@@ -31,6 +32,7 @@ function HomePage() {
           <Route path="/go-shop/myList" component={MyList} />
           <Route path="/go-shop/shoppingList" component={ShoppingList} />
         </Paper>
+        <Footer />
       </BrowserRouter>
     </Fragment>
   )

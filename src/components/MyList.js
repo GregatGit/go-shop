@@ -35,7 +35,6 @@ const MyList = ({ list, toggleItemDone, itemDelete, emptyShoppingList }) => {
       <ul>{list.length ? displayItems(list, toggleItemDone, itemDelete) : <p><u>your list is empty</u></p>}</ul>
       <h3>warning: this will clear your list</h3>
       <button onClick={emptyShoppingList}>DELETE ALL</button>
-      <p>buffer</p>
     </div>
   )
 }
