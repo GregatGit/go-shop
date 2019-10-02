@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
 import { green } from '@material-ui/core/colors'
-import {Radio, Button} from '@material-ui/core/'
+import {Radio, Button, Divider} from '@material-ui/core/'
 import { displayName } from '../helpers'
 import { toggleItemDone, itemDelete } from '../actions'
 
@@ -43,6 +43,7 @@ function ItemList( { status, name, toggleItemDone, itemDelete, index }) {
   }
 
   return (
+    <Fragment>
     <li key={index}>
       <h3>{displayName(name)}</h3>
       <div>
@@ -64,6 +65,8 @@ function ItemList( { status, name, toggleItemDone, itemDelete, index }) {
     </div>
     <Button variant="contained" className={classes.button} color="secondary" onClick={() => itemDelete(index)}>Remove</Button>
     </li>
+    <Divider />
+    </Fragment>
   )
 }
 
