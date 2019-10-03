@@ -18,29 +18,29 @@ It allows for users who want either simple lists or more complicated lists.
 Boxes are ticked for features completed
 
 - Home Screen
-  - ☐Show Lists
-  - ☐Build New List
+  - ☒Show Lists
+  - ☒Build New List
   - ☐Choose from other lists
   - ☐List History
   - ☐Instructions button
   - ☐About button
   - ☐Favourite List
 - Shopping List
-  - ☐Bought it button
-  - ☐Done button (show all items you&#39;ve got so far)
+  - ☒Bought it button
+  - ☒Done button (show all items you&#39;ve got so far)
   - ☐Categories
   - ☐Swiping Actions
 - List Builder
-  - ☐Display items with a check box
-  - ☐Select All/ Deselect All button
+  - ☒Display items with a check box
+  - ☒Select All/ Deselect All button
   - ☐Create new item option
-  - ☐Show list so far button
-  - ☐Done button
+  - ☒Show list so far button
+  - ☒Done button
   - ☐List History
 - Create new item
   - ☐Fields /name/store/category
   - ☐Add button
-  - ☐Cancel button
+  - ☒Cancel button
 
 ## Technologies
 
@@ -48,11 +48,11 @@ The App will be a web-based App utilizing Create-React-App.
 
 - Create-React-App
 - Redux
-- Bootstrap
+- React Router
 - Html
 - Css
 - MongoDB
-- Semantic UI
+- Material-UI
 
 ## See App Running
 
