@@ -16,7 +16,7 @@ function Footer({ amount = 0 }) {
   return (
     <div className={classes.root}>
       <AppBar position="relative">
-        <Tabs aria-label="simple tabs example">
+        <Tabs value={false} aria-label="simple tabs example">
         <Tab label="your list has" />
         <Tab label={amount + " items"} />
         </Tabs>
