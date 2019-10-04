@@ -1,148 +1,148 @@
 [
-  { "name": "cheese", "category": ["dairy"], "store": "Aldi", "lists": ["wy1"] },
+  { "name": "cheese", "category": ["dairy"], "store": "Aldi", "lists": ["weekly"] },
   {
     "name": "milk",
     "category": ["dairy"],
     "store": "Aldi",
-    "lists": ["wy1", "qs3"]
+    "lists": ["weekly", "quick_shop"]
   },
   {
     "name": "chicken_legs",
     "category": "meat",
     "store": "Aldi",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "rye_bread",
     "category": "bakery",
     "store": "Coles",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "dish_soap",
     "category": "cleaners",
     "store": "Aldi",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "tissues",
     "category": "cleaners",
     "store": "Aldi",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "face_wash",
     "category": "personal_care",
     "store": "Aldi",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "coffee",
     "category": "drinks",
     "store": "Coles",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "tea",
     "category": "drinks",
     "store": "Aldi",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "soft_drink",
     "category": "drinks",
     "store": "Aldi",
-    "lists": ["ps2"]
+    "lists": ["party_shop"]
   },
   {
     "name": "coke",
     "category": "drinks",
     "store": "Coles",
-    "lists": ["ps2"]
+    "lists": ["party_shop"]
   },
   {
     "name": "light_rye_bread",
     "category": "bakery",
     "store": "Aldi",
     "description": "light rye sandwiches",
-    "lists": ["wy1", "qs3"]
+    "lists": ["weekly", "quick_shop"]
   },
   {
     "name": "canned_tomatoes",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "Australian cans_&_oils tomatoes",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "Pasta_Sauce",
     "category": "sauses",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "beef_mince",
     "category": "meat",
     "store": "Aldi",
     "description": "4 star 500g",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "spaghetti",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "spiral_pasta",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "olive_oil",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "cooking_oil",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "toilet_paper",
     "category": "cleaners",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "butter",
     "category": ["dairy"],
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "mince",
     "category": "meat",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "buns",
     "category": "bakery",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
 
   {
@@ -150,496 +150,496 @@
     "category": "cleaners",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "sliced_ham",
     "category": "deli",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "ham",
     "category": "deli",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "instant_noodles",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "quick_oats",
     "category": "ceral",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "musli",
     "category": "cereal",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "onions",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "lettuce",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "tomatoes",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "carrots",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "apples",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "oranges",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "avocado",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "mandarines",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "bananas",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "red_onions",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "mushrooms",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "potatoes",
     "category": "produce",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "flour",
     "category": "dry_&_baking",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fav1"]
+    "lists": ["fruit_&_veg"]
   },
   {
     "name": "self_raising_flour",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "sugar",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "brown_sugar",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "icing_sugar",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "caster_sugar",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "coffee_creamer",
     "category": "drinks",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "spices",
     "category": "spices",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "italian_herbs",
     "category": "spices",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "weet-bix",
     "category": "cereal",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "taccos",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "corn_chips",
     "category": "junk",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "wraps",
     "category": "bakery",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "semolina",
     "category": "cereal",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "dried_peas",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "dried_beans",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "coccoa",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "bread_crumbs",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "baking_powder",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "baking_soda",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "chicken_paddies",
     "category": "meat",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "whole_chicken",
     "category": "meat",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "pork_mince",
     "category": "meat",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "sausages",
     "category": "meat",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "schnitzel",
     "category": "meat",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "sesame_seeds",
     "category": "spices",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "pumpkin_seeds",
     "category": "spices",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "long_grain_rice",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "short_grain_rice",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "stir_fry_sauce",
     "category": "sauses",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "seaweed",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "popcorn",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "oil_spray",
     "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "eggs",
     "category": "produce",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "mayonnaise",
     "category": "sauses",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "vinegar",
     "category": "sauses",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "BBQ_sauce",
     "category": "sauses",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "tomato_sauce",
     "category": "sauses",
     "store": "Aldi",
     "description": "sauses",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "olives",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "tuna",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "soy_milk",
     "category": ["dairy"],
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "laundry_soap",
     "category": "cleaners",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "softener",
     "category": "cleaners",
     "store": "Aldi",
     "description": "cleaners",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "laundry_soaker",
     "category": "cleaners",
     "store": "Aldi",
     "description": "cleaners",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "shampoo",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "conditioner",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "cotton_pads",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "make-up_remover",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "cotton_tips",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "insect_spray",
     "category": "cleaners",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "sanitary_pads",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "tampons",
     "category": "personal_care",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   },
   {
     "name": "canned_beans",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "",
-    "lists": ["wy1"]
+    "lists": ["weekly"]
   }
 ]

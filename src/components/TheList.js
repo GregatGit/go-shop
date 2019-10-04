@@ -5,6 +5,7 @@ import { addList, homePage } from '../actions'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button, List } from '@material-ui/core'
 import TheListItem from './TheListItem'
+import { displayName } from '../helpers'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,6 +32,7 @@ const TheList = props => {
   const [checked, setChecked] = useState(true)
   const alreadyInList = mainList.map(item => item.name)
   const listsArr = Object.keys(lists)
+
   function showItems(list, key, list2, typeOfList) {
     let type = 'lists'
     if (typeOfList.indexOf(key) === -1) {
@@ -64,7 +66,7 @@ const TheList = props => {
   const buttonTitle = checked ? 'Select' : 'Unselect'
   return (
     <div>
-      <h2> LIST</h2>
+      <h2>{displayName(id)} LIST</h2>
       <div>
         <Button
           variant="contained"
