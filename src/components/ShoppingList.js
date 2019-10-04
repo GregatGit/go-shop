@@ -15,6 +15,7 @@ import {
   ListItemIcon,
   ListItemText,
   Collapse,
+  Button,
 } from '@material-ui/core'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import ExpandLess from '@material-ui/icons/ExpandLess'
@@ -62,7 +63,7 @@ function ShoppingList(props) {
     setBought(list.length - amount)
   }, [])
 
-  const handleClick = (index) => {
+  const handleClick = index => {
     const temp = [...open]
     temp[index] = !temp[index]
     setOpen(temp)
@@ -72,6 +73,13 @@ function ShoppingList(props) {
     itemBought(name)
     setCount(count - 1)
     setBought(bought + 1)
+  }
+  function handleUndo() {
+    if (lastItem !== '') {
+      undo(lastItem)
+      setLastItem('')
+      setCount(count + 1)
+    }
   }
 
   const displayCategories = (cats, itemsArr, expandFunc, itemBought) => {
@@ -86,18 +94,24 @@ function ShoppingList(props) {
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
           <Collapse in={open[index]} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {itemsArr.map(item => {
-              if (item.category === cat && item.done === false){
-              return (
-                <ListItem button onClick={() => itemBought(item.name)} className={classes.nested}>
-                <ListItemIcon>
-                  <StarBorder />
-                </ListItemIcon>
-                <ListItemText primary={displayName(item.name)} />
-              </ListItem>
-              )}
-            })}
+            <List component="div" disablePadding>
+              {itemsArr.map(item => {
+                if (item.category === cat && item.done === false) {
+                  return (
+                    <ListItem
+                    key={item.name}
+                      button
+                      onClick={() => itemBought(item.name)}
+                      className={classes.nested}
+                    >
+                      <ListItemIcon>
+                        <StarBorder />
+                      </ListItemIcon>
+                      <ListItemText primary={displayName(item.name)} />
+                    </ListItem>
+                  )
+                }
+              })}
             </List>
           </Collapse>
         </Fragment>
@@ -106,18 +120,21 @@ function ShoppingList(props) {
   }
 
   return (
-    <List
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
-        </ListSubheader>
-      }
-      className={classes.root}
-    >
-      {displayCategories(unqCat, list, handleClick, itemBought)}
-    </List>
+    <Fragment>
+      <List
+        component="nav"
+        aria-labelledby="nested-list-subheader"
+        subheader={
+          <ListSubheader component="div" id="nested-list-subheader">
+            Nested List Items
+          </ListSubheader>
+        }
+        className={classes.root}
+      >
+        {displayCategories(unqCat, list, handleClick, itemClick)}
+      </List>
+      <Button onClick={handleUndo}>undo</Button>
+    </Fragment>
   )
 }
 
