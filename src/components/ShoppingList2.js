@@ -1,0 +1,133 @@
+import React, { useState, useEffect, Fragment } from 'react'
+import { connect } from 'react-redux'
+import {
+  itemBought,
+  homePage,
+  completedList,
+  emptyShoppingList,
+  undo,
+} from '../actions'
+import { makeStyles } from '@material-ui/core/styles'
+import {
+  ListSubheader,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Collapse,
+} from '@material-ui/core'
+import InboxIcon from '@material-ui/icons/MoveToInbox'
+import ExpandLess from '@material-ui/icons/ExpandLess'
+import ExpandMore from '@material-ui/icons/ExpandMore'
+import StarBorder from '@material-ui/icons/StarBorder'
+import { displayName } from '../helpers'
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+  },
+  nested: {
+    paddingLeft: theme.spacing(4),
+  },
+}))
+
+function ShoppingList(props) {
+  const {
+    list,
+    itemBought,
+    homePage,
+    completedList,
+    emptyShoppingList,
+    undo,
+  } = props
+  const classes = useStyles()
+  const [count, setCount] = useState(list.length)
+  const [bought, setBought] = useState(0)
+  const [lastItem, setLastItem] = useState('')
+  const categories = list.map(item => item.category)
+  const unqCat = [...new Set(categories)]
+  const openArr = unqCat.map(cat => false)
+  const [open, setOpen] = useState(openArr)
+
+  useEffect(() => {
+    let amount = 0
+    for (let i = 0; i < list.length; i++) {
+      if (!list[i].done) {
+        amount++
+      }
+    }
+    setCount(amount)
+    setBought(list.length - amount)
+  }, [])
+
+  const handleClick = (index) => {
+    const temp = [...open]
+    temp[index] = !temp[index]
+    setOpen(temp)
+  }
+  const itemClick = name => {
+    setLastItem(name)
+    itemBought(name)
+    setCount(count - 1)
+    setBought(bought + 1)
+  }
+
+  const displayCategories = (cats, itemsArr, expandFunc, itemBought) => {
+    return cats.map((cat, index) => {
+      return (
+        <Fragment>
+          <ListItem button onClick={() => expandFunc(index)}>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={displayName(cat)} />
+            {open[index] ? <ExpandLess /> : <ExpandMore />}
+          </ListItem>
+          <Collapse in={open[index]} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            {itemsArr.map(item => {
+              if (item.category === cat && item.done === false){
+              return (
+                <ListItem button onClick={() => itemBought(item.name)} className={classes.nested}>
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary={displayName(item.name)} />
+              </ListItem>
+              )}
+            })}
+            </List>
+          </Collapse>
+        </Fragment>
+      )
+    })
+  }
+
+  return (
+    <List
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader component="div" id="nested-list-subheader">
+          Nested List Items
+        </ListSubheader>
+      }
+      className={classes.root}
+    >
+      {displayCategories(unqCat, list, handleClick, itemBought)}
+    </List>
+  )
+}
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    list: state.shoppingList,
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  { itemBought, homePage, completedList, emptyShoppingList, undo }
+)(ShoppingList)

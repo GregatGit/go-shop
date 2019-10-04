@@ -8,7 +8,7 @@ import Header from './Header'
 import Welcome from './Welcome'
 import MyList from './MyList'
 import TheList from './TheList'
-import ShoppingList from './ShoppingList'
+import ShoppingList from './ShoppingList2'
 import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({

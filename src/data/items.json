@@ -1,8 +1,8 @@
 [
-  { "name": "cheese", "category": ["dairy"], "store": "Aldi", "lists": ["weekly"] },
+  { "name": "cheese", "category":"dairy", "store": "Aldi", "lists": ["weekly"] },
   {
     "name": "milk",
-    "category": ["dairy"],
+    "category": "dairy",
     "store": "Aldi",
     "lists": ["weekly", "quick_shop"]
   },
@@ -125,7 +125,7 @@
   },
   {
     "name": "butter",
-    "category": ["dairy"],
+    "category": "dairy",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
@@ -553,7 +553,7 @@
   },
   {
     "name": "soy_milk",
-    "category": ["dairy"],
+    "category": "dairy",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]

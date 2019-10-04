@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Footer({ amount }) {
+function Footer({ amount = 0 }) {
   const classes = useStyles()
 
   return (
