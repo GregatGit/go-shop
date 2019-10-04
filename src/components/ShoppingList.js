@@ -81,12 +81,17 @@ function ShoppingList(props) {
       setCount(count + 1)
     }
   }
+  const done = () => {
+    completedList(list)
+    emptyShoppingList()
+    homePage()
+  }
 
   const displayCategories = (cats, itemsArr, expandFunc, itemBought) => {
     return cats.map((cat, index) => {
       return (
         <Fragment>
-          <ListItem button onClick={() => expandFunc(index)}>
+          <ListItem key={cat} button onClick={() => expandFunc(index)}>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
@@ -99,7 +104,7 @@ function ShoppingList(props) {
                 if (item.category === cat && item.done === false) {
                   return (
                     <ListItem
-                    key={item.name}
+                      key={item.name}
                       button
                       onClick={() => itemBought(item.name)}
                       className={classes.nested}
@@ -121,12 +126,13 @@ function ShoppingList(props) {
 
   return (
     <Fragment>
+    <h1>SHOPPING LIST</h1>
       <List
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            Nested List Items
+            Press the folders
           </ListSubheader>
         }
         className={classes.root}
@@ -134,6 +140,13 @@ function ShoppingList(props) {
         {displayCategories(unqCat, list, handleClick, itemClick)}
       </List>
       <Button onClick={handleUndo}>undo</Button>
+      {count > 0 ? (
+        <p>
+          items left: <b>{count}</b>
+        </p>
+      ) : (
+        <Button onClick={done}>DONE</Button>
+      )}
     </Fragment>
   )
 }
