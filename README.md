@@ -20,7 +20,7 @@ Boxes are ticked for features completed
 - Home Screen
   - ☒Show Lists
   - ☒Build New List
-  - ☐Choose from other lists
+  - ☒Choose from other lists
   - ☐List History
   - ☐Instructions button
   - ☐About button
