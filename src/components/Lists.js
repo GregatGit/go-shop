@@ -14,10 +14,10 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Lists = ({ lists, amount }) => {
+const Lists = ({ lists, categories }) => {
   const classes = useStyles()
 
-  const createListButton = list => {
+  const createListButtons = (list) => {
     const listOfList = Object.keys(list)
     return listOfList.map(name => {
       const display = displayName(lists[name].name)
@@ -28,6 +28,26 @@ const Lists = ({ lists, amount }) => {
               variant="contained"
               color="primary"
               className={classes.button}
+              
+            >
+              {display}
+            </Button>
+          </Link>
+        </ListItem>
+      )
+    })
+  }
+
+  const createCategoryButtons = (cats) => {
+    return cats.map(name => {
+      const display = displayName(name)
+      return (
+        <ListItem key={name}>
+          <Link to={`/go-shop/lists/${name}`}>
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.button}           
             >
               {display}
             </Button>
@@ -42,7 +62,8 @@ const Lists = ({ lists, amount }) => {
       <h1>LISTS</h1>
       <h3>press to see items in list</h3>
       <p>items won't show if they are already on your list</p>
-      <List>{createListButton(lists)}</List>
+      <List>{createListButtons(lists)}</List>
+      <List>{createCategoryButtons(categories)}</List>
     </div>
   )
 }
@@ -51,6 +72,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     lists: state.lists,
     amount: state.shoppingList.length,
+    categories: state.categories
   }
 }
 

@@ -5,6 +5,7 @@ import { addList, homePage } from '../actions'
 import { displayName } from '../helpers'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button, List, ListItem, ListItemText } from '@material-ui/core'
+import TheListItem from './TheListItem'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   checkbox: {
     color: 'red',
-    margin: '10px'
+    margin: '10px',
   },
   button: {
     margin: theme.spacing(1),
@@ -26,25 +27,28 @@ const useStyles = makeStyles(theme => ({
 
 const TheList = props => {
   const classes = useStyles()
-  const { items, lists, addList, mainList } = props
+  const { items, lists, addList, mainList} = props
   const id = props.match.params.id
   const [checked, setChecked] = useState(true)
-
-  function showItems(list, key, list2) {
+  const alreadyInList = mainList.map(item => item.name)
+  const listsArr = Object.keys(lists)
+  function showItems(list, key, list2, typeOfList) {
+ 
+    let type = 'lists'
+    if (typeOfList.indexOf(key) === -1){
+      type = 'category'
+    }
     return list
-      .filter(item => item.lists.indexOf(key) !== -1) // only from list
       .filter(item => list2.indexOf(item.name) === -1) // not if already on shopping list
+      .filter(item => item[type].indexOf(key) !== -1) // only from list
       .map(({ name }) => {
         return (
-          <ListItem  key={name}>
-            <input className={classes.checkbox} type="checkbox" id={name} name={name} />
-            <label htmlFor={name}> <ListItemText id={name} primary={displayName(name)} /></label>
-          </ListItem>
+          <TheListItem name={name} />
         )
       })
   }
 
-  const alreadyInList = mainList.map(item => item.name)
+  
 
   function handleAddRemoveAll() {
     const inputs = document.querySelectorAll('input')
@@ -65,8 +69,8 @@ const TheList = props => {
   const buttonTitle = checked ? 'Select' : 'Unselect'
   return (
     <div>
-      <h2>{displayName(lists[id].name)} LIST</h2>
-      <div className="shopAndAdd">
+      <h2> LIST</h2>
+      <div>
         <Button
           variant="contained"
           color="primary"
@@ -84,13 +88,12 @@ const TheList = props => {
           Add Selected
         </Button>
       </div>
-      <List dense className={classes.root}>{showItems(items, id, alreadyInList)}</List>
+      <List dense className={classes.root}>
+        {showItems(items, id, alreadyInList, listsArr)}
+      </List>
 
       <Link to="/go-shop/lists/">
-        <Button
-          variant="contained"
-          className={classes.button}
-        >
+        <Button variant="contained" className={classes.button}>
           BACK
         </Button>
       </Link>
@@ -98,7 +101,7 @@ const TheList = props => {
   )
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     items: state.items,
     lists: state.lists,

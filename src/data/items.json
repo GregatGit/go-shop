@@ -1,8 +1,8 @@
 [
-  { "name": "cheese", "category": "dairy", "store": "Aldi", "lists": ["wy1"] },
+  { "name": "cheese", "category": ["dairy"], "store": "Aldi", "lists": ["wy1"] },
   {
     "name": "milk",
-    "category": "dairy",
+    "category": ["dairy"],
     "store": "Aldi",
     "lists": ["wy1", "qs3"]
   },
@@ -125,7 +125,7 @@
   },
   {
     "name": "butter",
-    "category": "dairy",
+    "category": ["dairy"],
     "store": "Aldi",
     "description": "",
     "lists": ["wy1"]
@@ -553,7 +553,7 @@
   },
   {
     "name": "soy_milk",
-    "category": "dairy",
+    "category": ["dairy"],
     "store": "Aldi",
     "description": "",
     "lists": ["wy1"]
