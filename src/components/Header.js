@@ -33,6 +33,8 @@ function Header({list}) {
     setValue(newValue)
   }
 
+  let display = amount === 0 ? '✔' : amount
+
   return (
     <div className={classes.root}>
       <AppBar position="fixed">
@@ -44,7 +46,7 @@ function Header({list}) {
           <Tab label="Home" {...a11yProps(0)} component={Link} to="/go-shop/"/>
           <Tab label="Lists" {...a11yProps(1)} component={Link} to="/go-shop/lists" />
           <Tab label="My List" {...a11yProps(2)} component={Link} to="/go-shop/myList"/>
-          <Tab label={"Let's Shop " + amount} {...a11yProps(3)} component={Link} to="/go-shop/shoppingList"/>
+          <Tab label={"Let's Shop " + display} {...a11yProps(3)} component={Link} to="/go-shop/shoppingList"/>
         </Tabs>
       </AppBar>
     </div>
