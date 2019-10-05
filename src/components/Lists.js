@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { displayName } from '../helpers'
 import { makeStyles } from '@material-ui/core/styles'
-import { Button, List, ListItem } from '@material-ui/core'
+import { Button } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -16,33 +16,13 @@ const useStyles = makeStyles(theme => ({
 
 const Lists = ({ lists, categories }) => {
   const classes = useStyles()
-
-  const createListButtons = (list) => {
-    const listOfList = Object.keys(list)
-    return listOfList.map(name => {
-      const display = displayName(lists[name].name)
-      return (
-        <ListItem key={name}>
-          <Link to={`/go-shop/lists/${name}`}>
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.button}
-              
-            >
-              {display}
-            </Button>
-          </Link>
-        </ListItem>
-      )
-    })
-  }
+  const listOfList = Object.keys(lists)
 
   const createCategoryButtons = (cats) => {
     return cats.map(name => {
       const display = displayName(name)
       return (
-        <ListItem key={name}>
+        <span key={name}>
           <Link to={`/go-shop/lists/${name}`}>
             <Button
               variant="contained"
@@ -52,7 +32,7 @@ const Lists = ({ lists, categories }) => {
               {display}
             </Button>
           </Link>
-        </ListItem>
+        </span>
       )
     })
   }
@@ -61,9 +41,9 @@ const Lists = ({ lists, categories }) => {
     <div>
       <h1>LISTS</h1>
       <h3>press to see items in list</h3>
-      <p>items won't show if they are already on your list</p>
-      <List>{createListButtons(lists)}</List>
-      <List>{createCategoryButtons(categories)}</List>
+      <p>items won't show if they are already on your list</p>   
+      <div>{createCategoryButtons(listOfList)}</div>
+      <div>{createCategoryButtons(categories)}</div>
     </div>
   )
 }
