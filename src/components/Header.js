@@ -29,7 +29,6 @@ function Header({list}) {
     }
   })
 
-  console.log(amount)
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
