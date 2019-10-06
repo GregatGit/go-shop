@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { displayName } from '../helpers'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button } from '@material-ui/core'
+import Create from './Dialog/Create'
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -37,6 +38,10 @@ const Lists = ({ lists, categories }) => {
     })
   }
 
+  const addOwnItem = () => {
+    console.log('add!')
+  }
+
   return (
     <div>
       <h1>LISTS</h1>
@@ -44,6 +49,8 @@ const Lists = ({ lists, categories }) => {
       <p>items won't show if they are already on your list</p>   
       <div>{createCategoryButtons(listOfList)}</div>
       <div>{createCategoryButtons(categories)}</div>
+      <Button onClick={addOwnItem}>ADD MY OWN ITEM</Button>
+      <Create />
     </div>
   )
 }
