@@ -11,7 +11,15 @@ export const TOGGLE_ITEM_DONE = 'TOGGLE_ITEM_DONE'
 export const COMPLETED_LIST = 'COMPLETED_LIST'
 export const EMPTY_SHOPPINGLIST = 'EMPTY_SHOPPINGLIST'
 export const UNDO_LIST = 'UNDO_LIST'
+export const ADD_ITEM_TO_SHOPPINGLIST = 'ADD_ITEM_TO_SHOPPINGLIST'
 
+export function addItemToShoppinglist(item) {
+  const toAdd = {...item, done: false, skip: false}
+  return {
+    type: ADD_ITEM_TO_SHOPPINGLIST,
+    payload: toAdd 
+  }
+}
 export function addItem(item) {
   return {
     type: ADD_ITEM,

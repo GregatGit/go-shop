@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
 import { displayName } from '../../helpers'
-import { addItem } from '../../actions'
+import { addItem, addItemToShoppinglist } from '../../actions'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Create = ({ items, categories, addItem }) => {
+const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
   console.log(items[0])
   const classes = useStyles()
   const [open, setOpen] = useState(false)
@@ -77,6 +77,7 @@ const Create = ({ items, categories, addItem }) => {
     addItem(newItem)
     // add it items
     // add it to shopping list
+    addItemToShoppinglist(newItem)
   }
 
   return (
@@ -146,4 +147,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { addItem })(Create)
+export default connect(mapStateToProps, { addItem, addItemToShoppinglist })(Create)

@@ -1,10 +1,9 @@
-import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST, UNDO_LIST, TOGGLE_ITEM_DONE, ITEM_DELETE } from '../actions'
+import { ADD_LIST, ITEM_BOUGHT, EMPTY_SHOPPINGLIST, UNDO_LIST, TOGGLE_ITEM_DONE, ITEM_DELETE, ADD_ITEM_TO_SHOPPINGLIST } from '../actions'
 
 export default function (state = [], action) {
   
   switch (action.type) {
     case ADD_LIST:
-      console.log('here ', action.payload)
       return [...state, ...action.payload]
 
     case ITEM_BOUGHT:
@@ -37,6 +36,9 @@ export default function (state = [], action) {
       const delItemState = [...state]
       delItemState.splice(action.payload, 1)
       return delItemState
+
+    case ADD_ITEM_TO_SHOPPINGLIST:
+      return [...state, action.payload]
 
     default:
       return state
