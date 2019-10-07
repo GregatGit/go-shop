@@ -1,5 +1,6 @@
 
 export const LIST_FILTER = 'LIST_FILTER'
+export const ADD_ITEM = 'ADD_ITEM'
 export const STATUS_IS_BOUGHT = 'STATUS_IS_BOUGHT'
 export const STATUS_IS_SKIP = 'STATUS_IS_SKIP'
 export const ADD_LIST = 'ADD_LIST'
@@ -10,6 +11,13 @@ export const TOGGLE_ITEM_DONE = 'TOGGLE_ITEM_DONE'
 export const COMPLETED_LIST = 'COMPLETED_LIST'
 export const EMPTY_SHOPPINGLIST = 'EMPTY_SHOPPINGLIST'
 export const UNDO_LIST = 'UNDO_LIST'
+
+export function addItem(item) {
+  return {
+    type: ADD_ITEM,
+    payload: item
+  }
+}
 
 export function itemDelete(index) {
   return {

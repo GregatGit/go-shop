@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
 import { displayName } from '../../helpers'
+import { addItem } from '../../actions'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -32,7 +33,8 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Create = ({ items, categories }) => {
+const Create = ({ items, categories, addItem }) => {
+  console.log(items[0])
   const classes = useStyles()
   const [open, setOpen] = useState(false)
   const [values, setValues] = useState({
@@ -63,9 +65,16 @@ const Create = ({ items, categories }) => {
 
   const handleAdd = () => {
     // make name format the same
-    let name = values.name.toLowerCase()
+    let name = values.name.replace(/ /g, "_").toLowerCase()
     // check name is ok
+    if (takenNames.indexOf(name) !== -1){
+      console.log(name, ' is already on your list')
+      return
+    }
     // create object
+    const newItem = {name, category: values.chosen, lists: ["quick_shop"]}
+    console.log(newItem)
+    addItem(newItem)
     // add it items
     // add it to shopping list
   }
@@ -137,4 +146,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(Create)
+export default connect(mapStateToProps, { addItem })(Create)

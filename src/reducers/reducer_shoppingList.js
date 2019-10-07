@@ -4,6 +4,7 @@ export default function (state = [], action) {
   
   switch (action.type) {
     case ADD_LIST:
+      console.log('here ', action.payload)
       return [...state, ...action.payload]
 
     case ITEM_BOUGHT:
