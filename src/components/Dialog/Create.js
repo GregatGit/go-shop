@@ -68,16 +68,15 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
     let name = values.name.replace(/ /g, "_").toLowerCase()
     // check name is ok
     if (takenNames.indexOf(name) !== -1){
-      console.log(name, ' is already on your list')
+      let message = `${name} is already on your list`
+      alert(message)
       return
     }
-    // create object
     const newItem = {name, category: values.chosen, lists: ["quick_shop"]}
     console.log(newItem)
     addItem(newItem)
-    // add it items
-    // add it to shopping list
     addItemToShoppinglist(newItem)
+    handleClose()
   }
 
   return (
