@@ -1,5 +1,6 @@
 import React from 'react'
 import About from './Dialog/About'
+import Instructions from './Dialog/Instructions'
 
 const Welcome = () => {
   return (
@@ -14,7 +15,10 @@ const Welcome = () => {
         <p>Once your happy with your list you're ready to shop.</p>
         <p>To start press the LISTS button above</p>
       </div>
-      <About />
+      <div>
+        <About />
+        <Instructions />
+      </div>
     </div>
   )
 }
