@@ -49,9 +49,10 @@ The App will be a web-based App utilizing Create-React-App.
 - Create-React-App
 - Material-UI
 - Redux
+- React Hooks
 - React Router
-- Html
-- Css
+- Html5
+- Css3
 - MongoDB
 
 
