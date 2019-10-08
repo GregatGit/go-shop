@@ -37,7 +37,7 @@ function About() {
   }
 
   return (
-    <div>
+    <span>
       <Fab
         onClick={handleClickOpen}
         color="secondary"
@@ -88,7 +88,7 @@ function About() {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </span>
   )
 }
 

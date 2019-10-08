@@ -37,7 +37,7 @@ function Instructions() {
   }
 
   return (
-    <Fragment>
+    <span>
       <Fab
         onClick={handleClickOpen}
         color="secondary"
@@ -79,7 +79,7 @@ function Instructions() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Fragment>
+    </span>
   )
 }
 
