@@ -77,11 +77,11 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
     const newItem = {name, category: values.chosen, lists: ["quick_shop"]}
     addItem(newItem)
     addItemToShoppinglist(newItem)
-    if (open){
+    
       const newValues = { ...values }
       newValues.name = ''
       setValues(newValues)
-    }
+    
     setOpen(open)
   }
 
@@ -99,7 +99,7 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
         <DialogContent>
           <DialogContentText>
             You can add a new item to your shopping list. You will find it in
-            which ever category you choose. The item name has to be orginal.
+            which ever category you choose. The item name has to be unique.
             ADD will add and close the window, Add + will add and keep this window open.
           </DialogContentText>
           <TextField
