@@ -67,7 +67,7 @@ function About() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <a href="mailto:mygoshop101?subject=contact_from_website&body=Hello">
+          <a href="mailto:mygoshop101@gmail.com?subject=contact_from_website&body=Hello">
             <Button onClick={handleClose} color="primary">
               Email
             </Button>
