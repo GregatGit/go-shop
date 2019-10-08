@@ -12,7 +12,7 @@ import {
   MenuItem,
 } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
-import { displayName } from '../../helpers'
+import { displayName, checkName } from '../../helpers'
 import { addItem, addItemToShoppinglist } from '../../actions'
 
 const useStyles = makeStyles(theme => ({
@@ -34,7 +34,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
-  console.log(items[0])
   const classes = useStyles()
   const [open, setOpen] = useState(false)
   const [values, setValues] = useState({
@@ -63,20 +62,27 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
     setValues(newValues)
   }
 
-  const handleAdd = () => {
-    // make name format the same
-    let name = values.name.replace(/ /g, "_").toLowerCase()
-    // check name is ok
+  const handleAdd = (open) => {
+    let name = values.name.trim().replace(/ /g, "_").toLowerCase()
+    const check = checkName(name)
+    if (check.errorStatus){
+      alert(check.message)
+      return
+    }
     if (takenNames.indexOf(name) !== -1){
       let message = `${name} is already on your list`
       alert(message)
       return
     }
     const newItem = {name, category: values.chosen, lists: ["quick_shop"]}
-    console.log(newItem)
     addItem(newItem)
     addItemToShoppinglist(newItem)
-    handleClose()
+    if (open){
+      const newValues = { ...values }
+      newValues.name = ''
+      setValues(newValues)
+    }
+    setOpen(open)
   }
 
   return (
@@ -94,6 +100,7 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
           <DialogContentText>
             You can add a new item to your shopping list. You will find it in
             which ever category you choose. The item name has to be orginal.
+            ADD will add and close the window, Add + will add and keep this window open.
           </DialogContentText>
           <TextField
             autoFocus
@@ -103,6 +110,7 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
             type="name"
             fullWidth
             onChange={handleNameChange}
+            value={values.name}
           />
           <TextField
             id="standard-select-category"
@@ -116,7 +124,7 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
                 className: classes.menu,
               },
             }}
-            helperText="Please select your category"
+            helperText="Please select your category (others by default)"
             margin="normal"
           >
             {categories.map(cat => (
@@ -130,8 +138,11 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleAdd} color="primary">
+          <Button onClick={() => handleAdd(false)} color="primary">
             Add
+          </Button>
+          <Button onClick={() => handleAdd(true)} color="primary">
+            Add +
           </Button>
         </DialogActions>
       </Dialog>
