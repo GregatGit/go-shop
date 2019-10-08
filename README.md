@@ -33,13 +33,13 @@ Boxes are ticked for features completed
 - List Builder
   - ☒Display items with a check box
   - ☒Select All/ Deselect All button
-  - ☐Create new item option
+  - ☒Create new item option
   - ☒Show list so far button
   - ☒Done button
   - ☐List History
 - Create new item
-  - ☐Fields /name/store/category
-  - ☐Add button
+  - ☒Fields /name/category
+  - ☒Add button
   - ☒Cancel button
 
 ## Technologies
@@ -47,12 +47,13 @@ Boxes are ticked for features completed
 The App will be a web-based App utilizing Create-React-App.
 
 - Create-React-App
+- Material-UI
 - Redux
 - React Router
 - Html
 - Css
 - MongoDB
-- Material-UI
+
 
 ## See App Running
 
