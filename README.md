@@ -22,13 +22,13 @@ Boxes are ticked for features completed
   - ☒Build New List
   - ☒Choose from other lists
   - ☐List History
-  - ☐Instructions button
-  - ☐About button
+  - ☒Instructions button
+  - ☒About button
   - ☒Favourite List
 - Shopping List
   - ☒Bought it button
   - ☒Done button (show all items you&#39;ve got so far)
-  - ☐Categories
+  - ☒Categories
   - ☐Swiping Actions
 - List Builder
   - ☒Display items with a check box
