@@ -62,7 +62,8 @@ function About() {
             I built Go-Shop to practice my react and material-ui skills. And it
             makes shopping easier. You can see some of my other projects at my
             GitHub profile. If you have any issues please email me at
-            mygoshop101@gmail.com. Please enjoy.
+            mygoshop101@gmail.com. <br />
+            Please enjoy.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
