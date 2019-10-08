@@ -24,7 +24,7 @@ Boxes are ticked for features completed
   - ☐List History
   - ☐Instructions button
   - ☐About button
-  - ☐Favourite List
+  - ☒Favourite List
 - Shopping List
   - ☒Bought it button
   - ☒Done button (show all items you&#39;ve got so far)
@@ -57,6 +57,6 @@ The App will be a web-based App utilizing Create-React-App.
 
 ## See App Running
 
-When the app is running instructions on how to use it will be placed here.
+Go-Shop is up and running. [here](https://gregatgit.github.io/go-shop/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
