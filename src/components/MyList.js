@@ -20,13 +20,13 @@ const MyList = ({ list, emptyShoppingList }) => {
       <h1>YOUR LIST</h1>
       <p>Here you can edit your list.</p>
       <p>
-        Green: On list and needs to be bought
+        <b>Green:</b> On list and needs to be bought
       </p>
       <p>
-        Red: Have it already
+        <b>Red:</b> Have it already
       </p>
       <p>
-        Remove: deletes them completely.
+        <b>Remove:</b> deletes them completely.
       </p>
 
       <List>{list.length ? displayItems(list) : <p><u>your list is empty</u></p>}</List>
