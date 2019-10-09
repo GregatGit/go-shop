@@ -65,7 +65,7 @@ function ShoppingList(props) {
     setBought(list.length - amount)
   }, [])
 
-  const handleClick = index => {
+  const handleClick = index => { // expand func
     const temp = [...open]
     temp[index] = !temp[index]
     setOpen(temp)
