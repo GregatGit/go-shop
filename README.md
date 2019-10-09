@@ -18,29 +18,55 @@ It allows for users who want either simple lists or more complicated lists.
 Boxes are ticked for features completed
 
 - Home Screen
-  - ☒Show Lists
-  - ☒Build New List
-  - ☒Choose from other lists
-  - ☐List History
-  - ☒Instructions button
-  - ☒About button
-  - ☒Favourite List
+  - ☒ NavBar
+  - ☒ Welcom message
+  - ☒ About button
+  - ☒ Help/Instructions button
+  - ☒ info bar(below)
+  - ☒ Show Lists
+  - ☒ Build New List
+  - ☒ Choose from other lists
+  - ☒ Favourite List
+  
+- Lists
+  - ☒ Create new item option
+  - ☒ Instructions
+  - ☒ Catogory Buttons
+  - ☒ Other lists
+  - ☒ Item count (below)
+  - List Builder
+    - ☒ Display items with a check box
+    - ☒ Select All/ Deselect All button
+    - ☒ Back button
+    - ☒ Remove chosen items
+    - ☒ Title matches items
+  - Create new item
+    - ☒ Fields /name/category
+    - ☒ Add button
+    - ☒ Cancel button
+    - ☒ Rejects names taken
+    - ☒ Name has to be > 2 chars
+
+- My List
+  - ☒ Toggle bought
+  - ☒ Remove button
+  - ☒ Delete All
+  - ☒ Show list so far
+
 - Shopping List
-  - ☒Bought it button
-  - ☒Done button (show all items you&#39;ve got so far)
-  - ☒Categories
-  - ☐Swiping Actions
-- List Builder
-  - ☒Display items with a check box
-  - ☒Select All/ Deselect All button
-  - ☒Create new item option
-  - ☒Show list so far button
-  - ☒Done button
-  - ☐List History
-- Create new item
-  - ☒Fields /name/category
-  - ☒Add button
-  - ☒Cancel button
+  - ☒ Bought it action
+  - ☐ Instructions
+  - ☒ Done button
+  - ☒ Undo button
+  - ☒ Categories
+  - ☐ Swiping Actions
+  - ☐ Display List without categories
+
+- Future Actions
+  - ☐ Store lists & items in MongoDB
+  - ☐ Txt or email list
+  - ☐ Import lists
+  - ☐
 
 ## Technologies
 
@@ -54,7 +80,6 @@ The App will be a web-based App utilizing Create-React-App.
 - Html5
 - Css3
 - MongoDB
-
 
 ## See App Running
 
