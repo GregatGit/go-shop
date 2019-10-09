@@ -60,7 +60,7 @@ Boxes are ticked for features completed
   - ☒ Undo button
   - ☒ Categories
   - ☐ Swiping Actions
-  - ☐ Display List without categories
+  - ☒ Display List with or without categories
 
 - Future Actions
   - ☐ Store lists & items in MongoDB
