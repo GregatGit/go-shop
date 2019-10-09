@@ -16,6 +16,7 @@ import {
   ListItemText,
   Collapse,
   Button,
+  Divider,
 } from '@material-ui/core'
 import InboxIcon from '@material-ui/icons/MoveToInbox'
 import ExpandLess from '@material-ui/icons/ExpandLess'
@@ -51,6 +52,7 @@ function ShoppingList(props) {
   const unqCat = [...new Set(categories)]
   const openArr = unqCat.map(cat => false)
   const [open, setOpen] = useState(openArr)
+  const [oneList, setOneList] = useState(false)
 
   useEffect(() => {
     let amount = 0
@@ -124,20 +126,43 @@ function ShoppingList(props) {
     })
   }
 
+  const displayList = sList => {
+    return sList
+      .filter(item => !item.done)
+      .map(({ name }) => {
+        return (
+          <Fragment>
+            <ListItem
+              className={classes.items}
+              button
+              key={name}
+              onClick={() => itemClick(name)}
+            >
+              <ListItemText primary={displayName(name)} />
+            </ListItem>
+            <Divider />
+          </Fragment>
+        )
+      })
+  }
+
   return (
     <Fragment>
-    <h1>SHOPPING LIST</h1>
+      <h1>SHOPPING LIST</h1>
+      <Button onClick={() => setOneList(!oneList)}>{oneList? 'folders' : 'items'}</Button>
       <List
         component="nav"
         aria-labelledby="nested-list-subheader"
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            Press the folders
+            {!oneList ? "Press folders to expand" : ""}
           </ListSubheader>
         }
         className={classes.root}
       >
-        {displayCategories(unqCat, list, handleClick, itemClick)}
+        {oneList
+          ? displayList(list)
+          : displayCategories(unqCat, list, handleClick, itemClick)}
       </List>
       <Button onClick={handleUndo}>undo</Button>
       {count > 0 ? (
