@@ -9,6 +9,7 @@ import {
   DialogContentText,
   DialogTitle,
   Slide,
+  Divider
 } from '@material-ui/core'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -62,10 +63,12 @@ function Instructions() {
           Use the navbar above to navigate around the app.<br />
           <b>LISTS:</b> Here you choose categories to look through add items.
           Once an item is on the list it won’t show in these lists any more.
-          You create your own item here.<br />
+          You create your own item here. <u><b>Important:</b></u> After the items' tick box is checked, you must press <b>ADD SELECTED</b> to add the items to your list.
+          <Divider />
           <b>MY LIST:</b> This has all the items on the list you are creating.<br />
           You can mark an item as bought or remove from your list completely.<br />
-          You can even put it back on the list to be bought.<br />
+          You can even put it back on the list to be bought.
+          <Divider />
           <b>LET’S SHOP:</b> This is the list for when you are shopping.  The items are
           all sorted into categories. When you press an item it is marked as done
           and off this section. You can see the count beside LET’S SHOP.
