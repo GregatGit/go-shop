@@ -1,5 +1,10 @@
 [
-  { "name": "cheese", "category":"dairy", "store": "Aldi", "lists": ["weekly"] },
+  {
+    "name": "cheese",
+    "category": "dairy",
+    "store": "Aldi",
+    "lists": ["weekly"]
+  },
   {
     "name": "milk",
     "category": "dairy",
@@ -641,5 +646,54 @@
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
+  },
+  {
+    "name": "spray_oil",
+    "category": "cans_&_oils",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "tuna",
+    "category": "cans_&_oils",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "taco_shells",
+    "category": "dry_&_baking",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "coffee_creamer",
+    "category": "drinks",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "soy_milk",
+    "category": "dairy",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "whole_chicken",
+    "category": "meat",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
+  },
+  {
+    "name": "black_beans",
+    "category": "cans_&_oils",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
   }
 ]
