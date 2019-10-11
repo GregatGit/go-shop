@@ -676,13 +676,6 @@
     "lists": ["wy1"]
   },
   {
-    "name": "soy_milk",
-    "category": "dairy",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["wy1"]
-  },
-  {
     "name": "whole_chicken",
     "category": "meat",
     "store": "Aldi",
