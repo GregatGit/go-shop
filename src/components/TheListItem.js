@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const TheListItem = ({ name, styles }) => {
+const TheListItem = ({ name }) => {
   const classes = useStyles()
   return (
     <ListItem key={name}>
