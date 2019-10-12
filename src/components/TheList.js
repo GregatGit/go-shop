@@ -41,7 +41,7 @@ const TheList = props => {
     return list
       .filter(item => list2.indexOf(item.name) === -1) // not if already on shopping list
       .filter(item => item[type].indexOf(key) !== -1) // only from list
-      .map(({ name }) => {
+      .map(({ name, amount = 1 }) => {
         return <TheListItem key={name} name={name} />
       })
   }
