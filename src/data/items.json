@@ -136,13 +136,6 @@
     "lists": ["weekly"]
   },
   {
-    "name": "mince",
-    "category": "meat",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["weekly"]
-  },
-  {
     "name": "buns",
     "category": "bakery",
     "store": "Aldi",
@@ -281,7 +274,7 @@
     "category": "dry_&_baking",
     "store": "Fruit_Market",
     "description": "",
-    "lists": ["fruit_&_veg"]
+    "lists": ["weekly"]
   },
   {
     "name": "self_raising_flour",
@@ -335,13 +328,6 @@
   {
     "name": "weet-bix",
     "category": "cereal",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["weekly"]
-  },
-  {
-    "name": "taccos",
-    "category": "dry_&_baking",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
@@ -642,13 +628,6 @@
   },
   {
     "name": "spray_oil",
-    "category": "cans_&_oils",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["wy1"]
-  },
-  {
-    "name": "tuna",
     "category": "cans_&_oils",
     "store": "Aldi",
     "description": "",
