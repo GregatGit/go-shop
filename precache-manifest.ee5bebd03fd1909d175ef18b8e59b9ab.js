@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a684b4217b4c251458e1fceef6a7313f",
+    "revision": "d779fe8fdb3754c99c8eee5ed9abb500",
     "url": "/go-shop/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/go-shop/static/js/2.2896359c.chunk.js"
   },
   {
-    "revision": "e4d4209a22742475ca63",
-    "url": "/go-shop/static/js/main.d7fe44fb.chunk.js"
+    "revision": "4aa6513cf26e8cb95d14",
+    "url": "/go-shop/static/js/main.94341a15.chunk.js"
   },
   {
     "revision": "c394c5fbe9408ec7516c",

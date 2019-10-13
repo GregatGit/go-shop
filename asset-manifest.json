@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/go-shop/static/js/main.d7fe44fb.chunk.js",
-    "main.js.map": "/go-shop/static/js/main.d7fe44fb.chunk.js.map",
+    "main.js": "/go-shop/static/js/main.94341a15.chunk.js",
+    "main.js.map": "/go-shop/static/js/main.94341a15.chunk.js.map",
     "runtime~main.js": "/go-shop/static/js/runtime~main.882f2166.js",
     "runtime~main.js.map": "/go-shop/static/js/runtime~main.882f2166.js.map",
     "static/js/2.2896359c.chunk.js": "/go-shop/static/js/2.2896359c.chunk.js",
     "static/js/2.2896359c.chunk.js.map": "/go-shop/static/js/2.2896359c.chunk.js.map",
     "index.html": "/go-shop/index.html",
-    "precache-manifest.36f8b35eb9f0f38b4440df94728d3bfe.js": "/go-shop/precache-manifest.36f8b35eb9f0f38b4440df94728d3bfe.js",
+    "precache-manifest.ee5bebd03fd1909d175ef18b8e59b9ab.js": "/go-shop/precache-manifest.ee5bebd03fd1909d175ef18b8e59b9ab.js",
     "service-worker.js": "/go-shop/service-worker.js"
   }
 }
