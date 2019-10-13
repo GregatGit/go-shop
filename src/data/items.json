@@ -319,13 +319,6 @@
     "lists": ["weekly"]
   },
   {
-    "name": "coffee_creamer",
-    "category": "drinks",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["weekly"]
-  },
-  {
     "name": "spices",
     "category": "spices",
     "store": "Aldi",
@@ -671,13 +664,6 @@
   {
     "name": "coffee_creamer",
     "category": "drinks",
-    "store": "Aldi",
-    "description": "",
-    "lists": ["wy1"]
-  },
-  {
-    "name": "whole_chicken",
-    "category": "meat",
     "store": "Aldi",
     "description": "",
     "lists": ["wy1"]
