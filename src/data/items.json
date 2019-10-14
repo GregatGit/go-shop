@@ -765,5 +765,12 @@
     "store": "Aldi",
     "description": "",
     "lists": ["wy1"]
+  },
+  {
+    "name": "salsa",
+    "category": "sauses",
+    "store": "Aldi",
+    "description": "",
+    "lists": ["wy1"]
   }
 ]
