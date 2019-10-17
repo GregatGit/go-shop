@@ -85,6 +85,11 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
     setOpen(open)
   }
 
+  const handleSubmit = e => {
+    e.preventDefault()
+    handleAdd(true)
+  }
+
   return (
     <Fragment>
       <Button variant="contained" color="primary" onClick={handleClickOpen}>
@@ -95,6 +100,7 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
+      <form onSubmit={handleSubmit}>
         <DialogTitle id="form-dialog-title">New Item</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -145,6 +151,7 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
             Add +
           </Button>
         </DialogActions>
+        </form>
       </Dialog>
     </Fragment>
   )
