@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
@@ -8,7 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import SearchIcon from '@material-ui/icons/Search'
 import SearchBar from 'material-ui-search-bar'
 
-function Search() {
+function Search({ yourList, items}) {
   const [open, setOpen] = React.useState(false)
   const [search, setSearch] = useState('')
 
@@ -65,4 +66,11 @@ function Search() {
   )
 }
 
-export default Search
+const mapStateToProps = (state, ownProps) => {
+  return {
+    yourList: state.shoppingList,
+    items: state.items
+  }
+}
+
+export default connect(mapStateToProps)(Search)
