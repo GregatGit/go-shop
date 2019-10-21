@@ -6,9 +6,18 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import SearchIcon from '@material-ui/icons/Search'
+import SearchBar from 'material-ui-search-bar'
 
 function Search() {
   const [open, setOpen] = React.useState(false)
+  const [search, setSearch] = useState('')
+
+  const handleOnRequestSearch = (str) =>{
+    if (search === '') return
+    console.log(str)
+
+    setSearch('')
+  }
 
   const handleClickOpen = () => {
     setOpen(true)
@@ -38,6 +47,14 @@ function Search() {
             anonymous location data to Google, even when no apps are running.
           </DialogContentText>
         </DialogContent>
+        <SearchBar
+        value={search}
+        onChange={newValue => setSearch(newValue)}
+        onRequestSearch={() => handleOnRequestSearch(search)}
+        onClick={() => {
+          handleOnRequestSearch(search)
+        }}
+      />
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Disagree

@@ -5,7 +5,6 @@ import { displayName } from '../helpers'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button } from '@material-ui/core'
 import Create from './Dialog/Create'
-import SearchBar from 'material-ui-search-bar'
 import Search from './Dialog/Search'
 
 const useStyles = makeStyles(theme => ({
@@ -58,8 +57,8 @@ const Lists = ({ lists, categories }) => {
       <div>{createCategoryButtons(categories)}</div>
       <Button >ADD MY OWN ITEM</Button>
       <Create />
-      
-      <Search />
+     
+      <Search  />
     </div>
   )
 }
