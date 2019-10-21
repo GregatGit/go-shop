@@ -39,12 +39,11 @@ function Search() {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          {"Search the Go-Shop for an Item."}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
+            This will find an item for you and tell you where it is.
           </DialogContentText>
         </DialogContent>
         <SearchBar
@@ -56,11 +55,9 @@ function Search() {
         }}
       />
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Disagree
-          </Button>
+          
           <Button onClick={handleClose} color="primary" autoFocus>
-            Agree
+            Close
           </Button>
         </DialogActions>
       </Dialog>
