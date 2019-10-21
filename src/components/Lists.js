@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Button } from '@material-ui/core'
 import Create from './Dialog/Create'
 import SearchBar from 'material-ui-search-bar'
+import Search from './Dialog/Search'
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles(theme => ({
 const Lists = ({ lists, categories }) => {
   const classes = useStyles()
   const [search, setSearch] = useState('')
+  const [status, setStatus] = useState(false)
   const listOfList = Object.keys(lists)
 
   const createCategoryButtons = cats => {
@@ -40,6 +42,13 @@ const Lists = ({ lists, categories }) => {
     })
   }
 
+  const handleOnRequestSearch = (str) =>{
+    if (search === '') return
+    console.log(str)
+    setStatus(true)
+    setSearch('')
+  }
+
   return (
     <div>
       <h1>LISTS</h1>
@@ -49,11 +58,8 @@ const Lists = ({ lists, categories }) => {
       <div>{createCategoryButtons(categories)}</div>
       <Button >ADD MY OWN ITEM</Button>
       <Create />
-      <SearchBar
-        value={search}
-        onChange={newValue => setSearch(newValue)}
-        onRequestSearch={() => console.log(search)}
-      />
+      
+      <Search />
     </div>
   )
 }
