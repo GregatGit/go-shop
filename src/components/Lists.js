@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { displayName } from '../helpers'
@@ -18,8 +18,6 @@ const useStyles = makeStyles(theme => ({
 
 const Lists = ({ lists, categories }) => {
   const classes = useStyles()
-  const [search, setSearch] = useState('')
-  const [status, setStatus] = useState(false)
   const listOfList = Object.keys(lists)
 
   const createCategoryButtons = cats => {
@@ -39,13 +37,6 @@ const Lists = ({ lists, categories }) => {
         </span>
       )
     })
-  }
-
-  const handleOnRequestSearch = (str) =>{
-    if (search === '') return
-    console.log(str)
-    setStatus(true)
-    setSearch('')
   }
 
   return (
