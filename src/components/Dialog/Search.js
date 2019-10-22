@@ -8,6 +8,7 @@ import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import SearchIcon from '@material-ui/icons/Search'
 import SearchBar from 'material-ui-search-bar'
+import { displayName } from '../../helpers'
 
 function Search({ yourList, items}) {
   const [open, setOpen] = React.useState(false)
@@ -20,7 +21,6 @@ function Search({ yourList, items}) {
     let mess = `${theStr} is not in go shop - you can add it`
     const shopListNames = items.map(item => item.name)
     let inList = shopListNames.indexOf(theStr)
-    console.log(inList)
     if (inList !== -1){
       let inYourList = ''
       for (let i = 0; i < yourList.length; i++){
@@ -29,7 +29,7 @@ function Search({ yourList, items}) {
           break
         }
       }
-      mess = `${theStr} is in the category: ${items[inList].category} ${inYourList}`
+      mess = `${displayName(theStr)} is in the category: ${displayName(items[inList].category)} ${inYourList}`
     }
     
     setMessage(mess)
