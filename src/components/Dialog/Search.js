@@ -12,11 +12,27 @@ import SearchBar from 'material-ui-search-bar'
 function Search({ yourList, items}) {
   const [open, setOpen] = React.useState(false)
   const [search, setSearch] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleOnRequestSearch = (str) =>{
+    let theStr = str.trim().replace(/ /g, "_")
     if (search === '') return
-    console.log(str)
-
+    let mess = `${theStr} is not in go shop - you can add it`
+    const shopListNames = items.map(item => item.name)
+    let inList = shopListNames.indexOf(theStr)
+    console.log(inList)
+    if (inList !== -1){
+      let inYourList = ''
+      for (let i = 0; i < yourList.length; i++){
+        if(yourList[i].name === theStr){
+          inYourList = 'and is already in your list'
+          break
+        }
+      }
+      mess = `${theStr} is in the category: ${items[inList].category} ${inYourList}`
+    }
+    
+    setMessage(mess)
     setSearch('')
   }
 
@@ -25,6 +41,7 @@ function Search({ yourList, items}) {
   }
 
   const handleClose = () => {
+    setMessage('')
     setOpen(false)
   }
 
@@ -44,7 +61,7 @@ function Search({ yourList, items}) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            This will find an item for you and tell you where it is.
+            {message}
           </DialogContentText>
         </DialogContent>
         <SearchBar
