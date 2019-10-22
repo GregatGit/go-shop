@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import Button from '@material-ui/core/Button'
+import {Button, Tooltip} from '@material-ui/core'
 import Dialog from '@material-ui/core/Dialog'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
@@ -47,9 +47,11 @@ function Search({ yourList, items}) {
 
   return (
     <div>
+    <Tooltip title="Search for Item" aria-label="search">
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         <SearchIcon />
       </Button>
+      </Tooltip>
       <Dialog
         open={open}
         onClose={handleClose}

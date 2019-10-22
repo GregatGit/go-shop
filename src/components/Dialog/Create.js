@@ -10,6 +10,7 @@ import {
   DialogTitle,
   TextField,
   MenuItem,
+  Tooltip
 } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
 import { displayName, checkName } from '../../helpers'
@@ -92,9 +93,11 @@ const Create = ({ items, categories, addItem, addItemToShoppinglist }) => {
 
   return (
     <Fragment>
+    <Tooltip title="Add New Item" aria-label="add">
       <Button variant="contained" color="primary" onClick={handleClickOpen}>
         <Add />
       </Button>
+      </Tooltip>
       <Dialog
         open={open}
         onClose={handleClose}
