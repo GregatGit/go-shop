@@ -46,7 +46,7 @@ function Search({ yourList, items}) {
   }
 
   return (
-    <div>
+    <span>
     <Tooltip title="Search for Item" aria-label="search">
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         <SearchIcon />
@@ -81,7 +81,7 @@ function Search({ yourList, items}) {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </span>
   )
 }
 
