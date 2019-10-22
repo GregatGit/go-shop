@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
   input: {
     display: 'none',
   },
+  bottomButton: {
+    paddingLeft: 10
+  }
 }))
 
 const Lists = ({ lists, categories }) => {
@@ -46,10 +49,11 @@ const Lists = ({ lists, categories }) => {
       <p>items won't show if they are already on your list</p>
       <div>{createCategoryButtons(listOfList)}</div>
       <div>{createCategoryButtons(categories)}</div>
-      <Button >ADD MY OWN ITEM</Button>
-      <Create />
-     
-      <Search  />
+      <div className={classes.bottomButton}>
+        <Create />
+        <span className={classes.bottomButton}></span>
+        <Search />
+      </div>
     </div>
   )
 }
