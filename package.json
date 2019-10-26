@@ -1,5 +1,6 @@
 {
   "name": "go-shop",
+  "author": "Greg Duncan",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://gregatgit.github.io/go-shop",
