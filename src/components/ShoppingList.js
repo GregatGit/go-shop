@@ -6,7 +6,7 @@ import {
   completedList,
   emptyShoppingList,
   undo,
-} from '../../actions'
+} from '../actions'
 import { makeStyles } from '@material-ui/core/styles'
 import {
   ListSubheader,
@@ -22,7 +22,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox'
 import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import StarBorder from '@material-ui/icons/StarBorder'
-import { displayName } from '../../helpers'
+import { displayName } from '../helpers'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -114,7 +114,7 @@ function ShoppingList(props) {
     })
   }
 
-  const displayList = sList => {
+  const displayList1 = sList => {
     return sList
       .filter(item => !item.done)
       .map(({ name }) => {
@@ -149,7 +149,7 @@ function ShoppingList(props) {
         className={classes.root}
       >
         {oneList
-          ? displayList(list)
+          ? displayList1(list)
           : displayCategories(unqCat, list, handleClick, itemClick)}
       </List>
       <Button onClick={handleUndo}>undo</Button>
