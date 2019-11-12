@@ -48,16 +48,9 @@ function ShoppingList(props) {
   const [oneList, setOneList] = useState(false)
 
   useEffect(() => {
-    // find out how many uncompleted todos
-    // let amount = 0
-    // for (let i = 0; i < list.length; i++) {
-    //   if (!list[i].done) {
-    //     amount++
-    //   }
-    // }
-    const amount = list.reduce((acc, todo) => todo.done ? acc + 1 : acc + 0, 0)
-    setCount(amount)
-    setBought(list.length - amount)
+    const itemsToBuy = list.reduce((acc, todo) => todo.done ? acc + 1 : acc + 0, 0)
+    setCount(itemsToBuy)
+    setBought(list.length - itemsToBuy)
   }, [])
 
   const handleClick = index => { // expand func
@@ -144,7 +137,7 @@ function ShoppingList(props) {
   return (
     <Fragment>
       <h1>SHOPPING LIST</h1>
-      <Button onClick={() => setOneList(!oneList)}>{oneList? 'folders' : 'items'}</Button>
+      <Button onClick={() => setOneList(!oneList)}>{oneList ? 'folders' : 'items'}</Button>
       <List
         component="nav"
         aria-labelledby="nested-list-subheader"
