@@ -36,14 +36,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function ShoppingList(props) {
-  const {
-    list,
-    itemBought,
-    homePage,
-    completedList,
-    emptyShoppingList,
-    undo,
-  } = props
+  const { list, itemBought, homePage, completedList, emptyShoppingList, undo } = props
   const classes = useStyles()
   const [count, setCount] = useState(list.length)
   const [bought, setBought] = useState(0)
@@ -55,12 +48,14 @@ function ShoppingList(props) {
   const [oneList, setOneList] = useState(false)
 
   useEffect(() => {
-    let amount = 0
-    for (let i = 0; i < list.length; i++) {
-      if (!list[i].done) {
-        amount++
-      }
-    }
+    // find out how many uncompleted todos
+    // let amount = 0
+    // for (let i = 0; i < list.length; i++) {
+    //   if (!list[i].done) {
+    //     amount++
+    //   }
+    // }
+    const amount = list.reduce((acc, todo) => todo.done ? acc + 1 : acc + 0, 0)
     setCount(amount)
     setBought(list.length - amount)
   }, [])
