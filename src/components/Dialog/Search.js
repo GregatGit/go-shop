@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { Button, Tooltip, DialogActions, Dialog, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core'
+import { Button, Tooltip, DialogActions, Dialog, DialogTitle } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search'
 import SearchBar from 'material-ui-search-bar'
 import { displayName } from '../../helpers'
