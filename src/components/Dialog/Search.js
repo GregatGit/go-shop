@@ -8,7 +8,7 @@ import { displayName } from '../../helpers'
 function Search({ yourList, items }) {
   const [open, setOpen] = React.useState(false)
   const [search, setSearch] = useState('')
-  const [message, setMessage] = useState('')
+  const [info, setInfo] = useState('Search the Go-Shop for an Item')
 
   const handleOnRequestSearch = str => {
     let theStr = str.trim().replace(/ /g, '_').toLowerCase()
@@ -28,8 +28,7 @@ function Search({ yourList, items }) {
         items[inList].category
       )} ${inYourList}`
     }
-
-    setMessage(mess)
+    setInfo(mess)
     setSearch('')
   }
 
@@ -38,7 +37,7 @@ function Search({ yourList, items }) {
   }
 
   const handleClose = () => {
-    setMessage('')
+    setInfo('Search the Go-Shop for an Item')
     setOpen(false)
   }
 
@@ -56,13 +55,9 @@ function Search({ yourList, items }) {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {'Search the Go-Shop for an Item.'}
+          {info}
         </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            {message}
-          </DialogContentText>
-        </DialogContent>
+        
         <SearchBar
           value={search}
           onChange={newValue => setSearch(newValue)}
