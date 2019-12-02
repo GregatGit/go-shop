@@ -137,7 +137,7 @@ function ShoppingList(props) {
   return (
     <Fragment>
       <h1>SHOPPING LIST</h1>
-      <Button onClick={() => setOneList(!oneList)}>{oneList ? 'folders' : 'items'}</Button>
+      <Button variant="outlined" onClick={() => setOneList(!oneList)}>{oneList ? 'show folders' : 'show items'}</Button>
       <List
         component="nav"
         aria-labelledby="nested-list-subheader"
