@@ -12,7 +12,7 @@ import ShoppingList from './ShoppingList'
 import Footer from './Footer'
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  paper: {
     padding: theme.spacing(3, 2),
     marginTop: 50,
   },
@@ -24,7 +24,7 @@ function HomePage() {
     <Fragment>
       <BrowserRouter>
         <Header />
-        <Paper className={classes.root}>
+        <Paper className={classes.paper}>
           <Route path="/" exact component={Welcome} />
           <Route path="/go-shop/" exact component={Welcome} />
           <Route path="/go-shop/lists" exact component={Lists} />
