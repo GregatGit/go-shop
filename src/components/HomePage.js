@@ -25,7 +25,7 @@ function HomePage() {
     <Fragment>
       <BrowserRouter>
         <Header />
-        <Paper className={classes.paper}>
+        <Paper elevation={0} className={classes.paper}>
           <Route path="/" exact component={Welcome} />
           <Route path="/go-shop/" exact component={Welcome} />
           <Route path="/go-shop/lists" exact component={Lists} />
