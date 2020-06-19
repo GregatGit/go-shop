@@ -7,25 +7,24 @@ import { Button } from '@material-ui/core'
 import Create from './Dialog/Create'
 import Search from './Dialog/Search'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   button: {
-    margin: theme.spacing(1),
+    margin: '4px',
   },
   input: {
     display: 'none',
   },
   bottomButton: {
-    paddingLeft: 10
-  }
-}))
+    paddingLeft: 10,
+  },
+})
 
 const Lists = ({ lists, categories }) => {
   const classes = useStyles()
   const listOfList = Object.keys(lists)
 
-  const createCategoryButtons = cats => {
-    return cats.map(name => {
-      const display = displayName(name)
+  const createCategoryButtons = (cats) => {
+    return cats.map((name) => {
       return (
         <span key={name}>
           <Link to={`/go-shop/lists/${name}`}>
@@ -34,7 +33,7 @@ const Lists = ({ lists, categories }) => {
               color="primary"
               className={classes.button}
             >
-              {display}
+              {displayName(name)}
             </Button>
           </Link>
         </span>
@@ -47,8 +46,8 @@ const Lists = ({ lists, categories }) => {
       <h1>LISTS</h1>
       <h3>press to see items in list</h3>
       <p>items won't show if they are already on your list</p>
-      <div>{createCategoryButtons(listOfList)}</div>
-      <div>{createCategoryButtons(categories)}</div>
+      <span>{createCategoryButtons(listOfList)}</span>
+      <span>{createCategoryButtons(categories)}</span>
       <div className={classes.bottomButton}>
         <Create />
         <span className={classes.bottomButton}></span>
