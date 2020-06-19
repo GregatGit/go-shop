@@ -29,6 +29,7 @@ function Footer({ amount = 0 }) {
       <AppBar position="fixed" className={classes.appBar}>
         <Tabs value={false} aria-label="simple tabs example">
         <Tab label="your list has" />
+        <Tab label="→" />
         <Tab label={amount + " items"} />
         </Tabs>
       </AppBar>
