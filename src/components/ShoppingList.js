@@ -2,8 +2,6 @@ import React, { useState, useEffect, Fragment } from 'react'
 import { connect } from 'react-redux'
 import {
   itemBought,
-  completedList,
-  emptyShoppingList,
   undo,
 } from '../actions'
 import { makeStyles } from '@material-ui/core/styles'
