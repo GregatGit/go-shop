@@ -35,9 +35,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function ShoppingList(props) {
-  const { list, itemBought, completedList, emptyShoppingList, undo } = props
+  const { list, itemBought, undo } = props
   const classes = useStyles()
-  const [count, setCount] = useState(list.length)
   const [bought, setBought] = useState(0)
   const [lastItem, setLastItem] = useState('')
   const categories = list.map(item => item.category)
@@ -48,7 +47,6 @@ function ShoppingList(props) {
 
   useEffect(() => {
     const itemsToBuy = list.reduce((acc, todo) => todo.done ? acc + 1 : acc + 0, 0)
-    setCount(itemsToBuy)
     setBought(list.length - itemsToBuy)
   }, [])
 
@@ -60,26 +58,20 @@ function ShoppingList(props) {
   const itemClick = name => {
     setLastItem(name)
     itemBought(name)
-    setCount(count - 1)
     setBought(bought + 1)
   }
   function handleUndo() {
     if (lastItem !== '') {
       undo(lastItem)
       setLastItem('')
-      setCount(count + 1)
     }
   }
-  const done = () => {
-    completedList(list)
-    emptyShoppingList()
-  }
-
+  
   const displayCategories = (cats, itemsArr, expandFunc, itemBought) => {
     return cats.map((cat, index) => {
       return (
         <Fragment>
-          <ListItem key={cat} button onClick={() => expandFunc(index)}>
+          <ListItem key={index} button onClick={() => expandFunc(index)}>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
@@ -151,13 +143,6 @@ function ShoppingList(props) {
           : displayCategories(unqCat, list, handleClick, itemClick)}
       </List>
       <Button onClick={handleUndo}>undo</Button>
-      {count > 0 ? (
-        <p>
-          items left: <b>{count}</b>
-        </p>
-      ) : (
-        <Button onClick={done}>DONE</Button>
-      )}
     </Fragment>
   )
 }
@@ -170,5 +155,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
   mapStateToProps,
-  { itemBought, completedList, emptyShoppingList, undo }
+  { itemBought, undo }
 )(ShoppingList)
