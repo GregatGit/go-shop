@@ -26,13 +26,13 @@ const GreenRadio = withStyles({
   checked: {},
 })(props => <Radio color="default" {...props} />)
 
-function ItemList( { status, name, toggleItemDone, itemDelete, index }) {
+function ItemList( { done, name, toggleItemDone, itemDelete, index }) {
   const classes = useStyles()
   const [selectedValue, setSelectedValue] = useState('green')
 
 
   useEffect(() => {
-    if (status){
+    if (done){
       setSelectedValue('red')
     }
   }, [])
