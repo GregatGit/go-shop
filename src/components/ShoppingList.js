@@ -21,6 +21,8 @@ import ExpandMore from '@material-ui/icons/ExpandMore'
 import StarBorder from '@material-ui/icons/StarBorder'
 import { displayName } from '../helpers'
 
+import DisplayList from './DisplayList'
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -102,30 +104,13 @@ function ShoppingList(props) {
     })
   }
 
-  const displayList1 = sList => {
-    return sList
-      .filter(item => !item.done)
-      .map(({ name }) => {
-        return (
-          <Fragment>
-            <ListItem
-              className={classes.items}
-              button
-              key={name}
-              onClick={() => itemClick(name)}
-            >
-              <ListItemText primary={displayName(name)} />
-            </ListItem>
-            <Divider />
-          </Fragment>
-        )
-      })
-  }
-
   return (
     <Fragment>
       <h1>SHOPPING LIST</h1>
-      <Button variant="outlined" onClick={() => setOneList(!oneList)}>{oneList ? 'show folders' : 'show items'}</Button>
+      <Button 
+        variant="outlined" 
+        onClick={() => setOneList(!oneList)}>{oneList ? 'show folders' : 'show items'}     
+      </Button>
       <List
         component="nav"
         aria-labelledby="nested-list-subheader"
@@ -137,7 +122,7 @@ function ShoppingList(props) {
         className={classes.root}
       >
         {oneList
-          ? displayList1(list)
+          ? <DisplayList list={list} func={itemClick} />
           : displayCategories(unqCat, list, handleClick, itemClick)}
       </List>
       <Button onClick={handleUndo}>undo</Button>
