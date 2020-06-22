@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { addList, homePage } from '../actions'
+import { addList } from '../actions'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button, List } from '@material-ui/core'
 import TheListItem from './TheListItem'
@@ -108,5 +108,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { addList, homePage }
+  { addList }
 )(TheList)

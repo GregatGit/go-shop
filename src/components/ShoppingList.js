@@ -2,7 +2,6 @@ import React, { useState, useEffect, Fragment } from 'react'
 import { connect } from 'react-redux'
 import {
   itemBought,
-  homePage,
   completedList,
   emptyShoppingList,
   undo,
@@ -36,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function ShoppingList(props) {
-  const { list, itemBought, homePage, completedList, emptyShoppingList, undo } = props
+  const { list, itemBought, completedList, emptyShoppingList, undo } = props
   const classes = useStyles()
   const [count, setCount] = useState(list.length)
   const [bought, setBought] = useState(0)
@@ -74,7 +73,6 @@ function ShoppingList(props) {
   const done = () => {
     completedList(list)
     emptyShoppingList()
-    homePage()
   }
 
   const displayCategories = (cats, itemsArr, expandFunc, itemBought) => {
@@ -172,5 +170,5 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(
   mapStateToProps,
-  { itemBought, homePage, completedList, emptyShoppingList, undo }
+  { itemBought, completedList, emptyShoppingList, undo }
 )(ShoppingList)
