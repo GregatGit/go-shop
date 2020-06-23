@@ -53,11 +53,11 @@ const DisplayCategories = (props) => {
       {categories &&
         categories.map((cat, index) => (
           <Fragment>
-            <ListItem button onClick={() =>handleClick(index)}>
+            <ListItem key={index} button onClick={() =>handleClick(index)}>
               <ListItemIcon>
                 <InboxIcon />
               </ListItemIcon>
-              <ListItemText primary={cat} />
+              <ListItemText primary={displayName(cat)} />
               {open[index] ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
             <Collapse in={open[index]} timeout="auto" unmountOnExit>
