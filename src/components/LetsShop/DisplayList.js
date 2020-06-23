@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { ListItem, ListItemText, Divider } from '@material-ui/core'
-import { displayName } from '../helpers'
+import { displayName } from '../../helpers'
 const useStyles = makeStyles({
   items: {
 

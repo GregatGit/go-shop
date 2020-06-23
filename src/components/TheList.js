@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 import { addList } from '../actions'
 import { makeStyles } from '@material-ui/core/styles'
 import { Button, List } from '@material-ui/core'
-import TheListItem from './TheListItem'
+import TheListItem from './TheList/TheListItem'
 import { displayName } from '../helpers'
 
+// this is used by Lists.js - when user wants to build from a category
+// go-shop/lists/<user choice>
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',

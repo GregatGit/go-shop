@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { emptyShoppingList } from '../actions'
-import ItemList from './ItemList'
 import { List, Button } from '@material-ui/core'
+
+import ItemList from './MyList/ItemList'
 
 const MyList = ({ list, emptyShoppingList }) => {
   function displayItems(list) {

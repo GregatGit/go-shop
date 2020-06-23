@@ -8,8 +8,8 @@ import {
   Button,
 } from '@material-ui/core'
 
-import DisplayList from './DisplayList'
-import DisplayCategories from './DisplayCategories'
+import DisplayList from './LetsShop/DisplayList'
+import DisplayCategories from './LetsShop/DisplayCategories'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function ShoppingList(props) {
+function LetsShop(props) {
   const { list, itemBought, undo } = props
   const classes = useStyles()
   const [bought, setBought] = useState(0)
@@ -89,4 +89,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, { itemBought, undo })(ShoppingList)
+export default connect(mapStateToProps, { itemBought, undo })(LetsShop)

@@ -1,7 +1,8 @@
 import React from 'react'
-import { displayName } from '../helpers'
 import { ListItem, ListItemText } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+
+import { displayName } from '../../helpers'
 
 const useStyles = makeStyles(theme => ({
   root: {

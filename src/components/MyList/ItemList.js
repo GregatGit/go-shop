@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
 import { green } from '@material-ui/core/colors'
 import {Radio, Button, Divider} from '@material-ui/core/'
-import { displayName } from '../helpers'
-import { toggleItemDone, itemDelete } from '../actions'
+import { displayName } from '../../helpers'
+import { toggleItemDone, itemDelete } from '../../actions'
 
 const useStyles = makeStyles(theme => ({
   button: {

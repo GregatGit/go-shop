@@ -14,7 +14,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import StarBorder from '@material-ui/icons/StarBorder'
 
-import { displayName } from '../helpers'
+import { displayName } from '../../helpers'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,7 +52,7 @@ const DisplayCategories = (props) => {
     >
       {categories &&
         categories.map((cat, index) => (
-          <Fragment>
+          <>
             <ListItem key={index} button onClick={() =>handleClick(index)}>
               <ListItemIcon>
                 <InboxIcon />
@@ -66,7 +66,7 @@ const DisplayCategories = (props) => {
                   .filter((item) => !item.done && item.category === cat)
                   .map((item) => (
                     <ListItem 
-                      key={item.name} 
+                      key={item.name}
                       button 
                       className={classes.nested}
                       onClick={() => itemClick(item.name)}
@@ -79,7 +79,7 @@ const DisplayCategories = (props) => {
                   ))}
               </List>
             </Collapse>
-          </Fragment>
+          </>
         ))}
     </List>
   )

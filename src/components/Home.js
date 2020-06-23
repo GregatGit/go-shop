@@ -2,7 +2,7 @@ import React from 'react'
 import About from './Dialog/About'
 import Instructions from './Dialog/Instructions'
 
-const Welcome = () => {
+const Home = () => {
   return (
     <div>
       <div>
@@ -23,4 +23,4 @@ const Welcome = () => {
   )
 }
 
-export default Welcome
+export default Home
