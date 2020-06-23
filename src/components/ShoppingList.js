@@ -22,6 +22,7 @@ import StarBorder from '@material-ui/icons/StarBorder'
 import { displayName } from '../helpers'
 
 import DisplayList from './DisplayList'
+import DisplayCategories from './DisplayCategories'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -107,6 +108,11 @@ function ShoppingList(props) {
   return (
     <Fragment>
       <h1>SHOPPING LIST</h1>
+      <DisplayCategories 
+        categories={unqCat} 
+        list={list}
+        itemClick={itemClick} 
+      />
       <Button 
         variant="outlined" 
         onClick={() => setOneList(!oneList)}>{oneList ? 'show folders' : 'show items'}     
