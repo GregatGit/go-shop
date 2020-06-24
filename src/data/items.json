@@ -81,7 +81,7 @@
   },
   {
     "name": "Pasta_Sauce",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
@@ -173,7 +173,7 @@
   },
   {
     "name": "quick_oats",
-    "category": "ceral",
+    "category": "cereal",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
@@ -334,7 +334,7 @@
   },
   {
     "name": "corn_chips",
-    "category": "junk",
+    "category": "treats",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
@@ -460,7 +460,7 @@
   },
   {
     "name": "stir_fry_sauce",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
@@ -495,30 +495,30 @@
   },
   {
     "name": "mayonnaise",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
   },
   {
     "name": "vinegar",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
   },
   {
     "name": "BBQ_sauce",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
     "description": "",
     "lists": ["weekly"]
   },
   {
     "name": "tomato_sauce",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
-    "description": "sauses",
+    "description": "sauces",
     "lists": ["weekly"]
   },
   {
@@ -768,7 +768,7 @@
   },
   {
     "name": "salsa",
-    "category": "sauses",
+    "category": "sauces",
     "store": "Aldi",
     "description": "",
     "lists": ["wy1"]
