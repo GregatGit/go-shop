@@ -9,12 +9,11 @@ import {
   Collapse,
 } from '@material-ui/core/'
 
-import InboxIcon from '@material-ui/icons/MoveToInbox'
 import ExpandLess from '@material-ui/icons/ExpandLess'
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import StarBorder from '@material-ui/icons/StarBorder'
 
-import { displayName } from '../../helpers'
+import { displayName, getInitialCount, returnIcon } from '../../helpers'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,14 +30,23 @@ const DisplayCategories = (props) => {
   const { categories, list, itemClick } = props
   const classes = useStyles()
 
-  const openArr = categories.map(cat => false)
+  const openArr = categories.map((cat) => false)
   const [open, setOpen] = useState(openArr)
+  const [catCount, setCatCount] = useState(getInitialCount(list, categories))
 
-  const handleClick = index => {
+  const handleClick = (index) => {
     const temp = [...open]
     temp[index] = !temp[index]
     setOpen(temp)
   }
+
+  const handleItemClick = (name, cat) => {
+    itemClick(name)
+    const obj = { ...catCount }
+    obj[cat].count = catCount[cat].count - 1
+    setCatCount(obj)
+  }
+
   return (
     <List
       component="nav"
@@ -52,34 +60,38 @@ const DisplayCategories = (props) => {
     >
       {categories &&
         categories.map((cat, index) => (
-          <>
-            <ListItem key={index} button onClick={() =>handleClick(index)}>
+          <Fragment key={index}>
+            <ListItem key={index} button onClick={() => handleClick(index)}>
               <ListItemIcon>
-                <InboxIcon />
+                {returnIcon(catCount[cat].count)}
               </ListItemIcon>
-              <ListItemText primary={displayName(cat)} />
+              <ListItemText
+                primary={`${displayName(cat)}`}
+              />
               {open[index] ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
             <Collapse in={open[index]} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 {list
                   .filter((item) => !item.done && item.category === cat)
-                  .map((item) => (
-                    <ListItem 
-                      key={item.name}
-                      button 
-                      className={classes.nested}
-                      onClick={() => itemClick(item.name)}
-                    >
-                      <ListItemIcon>
-                        <StarBorder />
-                      </ListItemIcon>
-                      <ListItemText primary={displayName(item.name)} />
-                    </ListItem>
-                  ))}
+                  .map((item, index) => {
+                    return (
+                      <ListItem
+                        key={item.name}
+                        button
+                        className={classes.nested}
+                        onClick={() => handleItemClick(item.name, cat)}
+                      >
+                        <ListItemIcon>
+                          <StarBorder />
+                        </ListItemIcon>
+                        <ListItemText primary={displayName(item.name)} />
+                      </ListItem>
+                    )
+                  })}
               </List>
             </Collapse>
-          </>
+          </Fragment>
         ))}
     </List>
   )
