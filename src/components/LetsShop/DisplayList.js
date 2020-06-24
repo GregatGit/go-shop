@@ -14,7 +14,7 @@ const DisplayList = ({ list, func }) => {
     .filter(item => !item.done)
     .map(({ name }) => {
       return (
-        <Fragment>
+        <Fragment key={name}>
           <ListItem
             className={classes.items}
             button
