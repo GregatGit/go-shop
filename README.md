@@ -55,7 +55,7 @@ Boxes are ticked for features completed
 
 - Shopping List
   - ☒ Bought it action
-  - ☐ Instructions
+  - ☒ Instructions
   - ☒ Done button
   - ☒ Undo button
   - ☒ Categories
